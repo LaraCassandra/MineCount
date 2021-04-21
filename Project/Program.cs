@@ -44,22 +44,38 @@ namespace Project
                 {
                     pageViews += 1;
 
-                    FileLoader myFileLoader = new FileLoader(path);
-                    myFileLoader.ReadFile();
+                    try
+                    {
+                        FileLoader myFileLoader = new FileLoader(path);
+                        myFileLoader.ReadFile();
 
-                    string disableSubmit = !runServer? "disabled" : "";
-                    
-                    byte[] data;
-                    if (myFileLoader.mimeType.IndexOf("text") >= 0)
-                        data = Encoding.UTF8.GetBytes(String.Format(Encoding.ASCII.GetString(myFileLoader.data), pageViews, disableSubmit));
-                    else
-                        data = myFileLoader.data;
+                        string disableSubmit = !runServer? "disabled" : "";
+                        
+                        byte[] data;
+                        if (myFileLoader.mimeType.IndexOf("text") >= 0)
+                            data = Encoding.UTF8.GetBytes(String.Format(Encoding.ASCII.GetString(myFileLoader.data), pageViews, disableSubmit));
+                        else
+                            data = myFileLoader.data;
 
-                    res.ContentType = myFileLoader.mimeType;
-                    res.ContentEncoding = Encoding.UTF8;
-                    res.ContentLength64 = data.LongLength;
-                    
-                    await res.OutputStream.WriteAsync(data, 0, data.Length);
+                        res.ContentType = myFileLoader.mimeType;
+                        res.ContentEncoding = Encoding.UTF8;
+                        res.ContentLength64 = data.LongLength;
+                        
+                        await res.OutputStream.WriteAsync(data, 0, data.Length);
+                    }
+                    catch (FileNotFoundException e)
+                    {
+                        byte[] data;
+                        data = Encoding.UTF8.GetBytes("<h2>A 404 error occured</h2>");
+
+                        res.ContentType = "text/html";
+                        res.ContentEncoding = Encoding.UTF8;
+                        res.ContentLength64 = data.LongLength;
+                        res.StatusCode = 404;
+                        
+                        await res.OutputStream.WriteAsync(data, 0, data.Length);
+                    }
+
                     res.Close();
                 }
             }
