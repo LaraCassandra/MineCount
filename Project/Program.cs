@@ -13,19 +13,6 @@ namespace Project
         public static string url = "http://localhost:8000/";
         public static int pageViews = 0;
         public static int requestCount = 0;
-        public static string pageData =
-        "<!DOCTYPE>" +
-        "<html>" +
-        "   <head>" +
-        "      <title> HttpListener Example </title>" +
-        "   </head>"+
-        "   <body"+
-        "       <p>Page views: {0} </p>"+
-        "       <form method=\"post\" action=\"shutdown\">"+
-        "           <input type=\"submit\" value=\"Shutdown\" {1}>"+
-        "       </form>"+
-        "   </body>"+
-        "</html>";
 
         public static async Task HandleIncomingConnections()
         {
@@ -43,20 +30,32 @@ namespace Project
                 Console.WriteLine(req.UserHostName);
                 Console.WriteLine(req.UserAgent);
                 Console.WriteLine();
+
+                string path = req.Url.AbsolutePath;
                 
-                if((req.HttpMethod == "POST") && req.Url.AbsolutePath == "/shutdown")
+                if((req.HttpMethod == "POST") && path == "/shutdown")
                 {
+                    path = "/index.html";
                     Console.WriteLine("Shutdown requested");
                     runServer = false;
                 }
 
-                if(req.Url.AbsolutePath != "/favicon.ico")
+                if(path != "/favicon.ico")
                 {
                     pageViews += 1;
 
+                    FileLoader myFileLoader = new FileLoader(path);
+                    myFileLoader.ReadFile();
+
                     string disableSubmit = !runServer? "disabled" : "";
-                    byte[] data = Encoding.UTF8.GetBytes(String.Format(pageData, pageViews, disableSubmit));
-                    res.ContentType = "text/html";
+                    
+                    byte[] data;
+                    if (myFileLoader.mimeType.IndexOf("text") >= 0)
+                        data = Encoding.UTF8.GetBytes(String.Format(Encoding.ASCII.GetString(myFileLoader.data), pageViews, disableSubmit));
+                    else
+                        data = myFileLoader.data;
+
+                    res.ContentType = myFileLoader.mimeType;
                     res.ContentEncoding = Encoding.UTF8;
                     res.ContentLength64 = data.LongLength;
                     
