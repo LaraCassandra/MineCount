@@ -18,12 +18,15 @@ namespace Project
         {
             bool runServer = true;
 
+            //  WHILE A USER HASNT VISITED THE SHUTDOWN URL / KEEP ON HANDLING REQUESTS
             while (runServer)
             {
+                // WILL WAIT HERE UNTIL WE HEAR FROM A CONNECTION
                 HttpListenerContext ctx = await listener.GetContextAsync();
                 HttpListenerRequest req = ctx.Request;
                 HttpListenerResponse res = ctx.Response;
 
+                // PRINT OUT SOME INFORMATION ABOUT THE REQUEST
                 Console.WriteLine("Request #: {0}", ++requestCount);
                 Console.WriteLine(req.Url.ToString());
                 Console.WriteLine(req.HttpMethod);
@@ -32,7 +35,9 @@ namespace Project
                 Console.WriteLine();
 
                 string path = req.Url.AbsolutePath;
-                
+
+
+                // IF SHUTDOWN IS REQUESTED W/ POST / SHUTDOWN THE SERVER AFTER SERVING THE PAGE
                 if((req.HttpMethod == "POST") && path == "/shutdown")
                 {
                     path = "/index.html";
@@ -40,6 +45,7 @@ namespace Project
                     runServer = false;
                 }
 
+                // DONT INCREMENT THE PAGE VIEWS COUNTER IF FAVICON.ICO IS REQUESTED
                 if(path != "/favicon.ico")
                 {
                     pageViews += 1;
@@ -49,13 +55,26 @@ namespace Project
                         FileLoader myFileLoader = new FileLoader(path);
                         myFileLoader.ReadFile();
 
-                        string disableSubmit = !runServer? "disabled" : "";
+                        // WRITE THE RESPONSE INFO
+                        string disableSubmit = !runServer ? "disabled" : "";
                         
                         byte[] data;
-                        if (myFileLoader.mimeType.IndexOf("text") >= 0)
-                            data = Encoding.UTF8.GetBytes(String.Format(Encoding.ASCII.GetString(myFileLoader.data), pageViews, disableSubmit));
+                        if (myFileLoader.mimeType.IndexOf("text/HTML") >= 0)
+                        {
+                            string input = Encoding.UTF8.GetString(myFileLoader.data);
+                            
+                            if (path == "/index.html")
+                                data = Encoding.UTF8.GetBytes(IndexHtmlParser.Process(input));
+                            //else if (path == "/hello.html")
+                            //    data = Encoding.UTF8.GetBytes(HelloHtmlParser.Process(input));
+                            else 
+                                throw new FileNotFoundException("Not a page");
+
+                        }
                         else
+                        {
                             data = myFileLoader.data;
+                        }
 
                         res.ContentType = myFileLoader.mimeType;
                         res.ContentEncoding = Encoding.UTF8;
@@ -65,6 +84,7 @@ namespace Project
                     }
                     catch (FileNotFoundException e)
                     {
+                        Console.WriteLine(e.Message);
                         byte[] data;
                         data = Encoding.UTF8.GetBytes("<h2>A 404 error occured</h2>");
 
@@ -73,6 +93,7 @@ namespace Project
                         res.ContentLength64 = data.LongLength;
                         res.StatusCode = 404;
                         
+                        // WRITE OUT TO THE RESPONSE AYNCSCHRONOUSLY THEN CLOSE IT
                         await res.OutputStream.WriteAsync(data, 0, data.Length);
                     }
 

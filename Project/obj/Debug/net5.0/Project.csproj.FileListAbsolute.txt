@@ -14,3 +14,5 @@ D:\Open Window\TERM 2\IDV\MineCount\Project\obj\Debug\net5.0\Project.dll
 D:\Open Window\TERM 2\IDV\MineCount\Project\obj\Debug\net5.0\ref\Project.dll
 D:\Open Window\TERM 2\IDV\MineCount\Project\obj\Debug\net5.0\Project.pdb
 D:\Open Window\TERM 2\IDV\MineCount\Project\obj\Debug\net5.0\Project.genruntimeconfig.cache
+D:\Open Window\TERM 2\IDV\MineCount\Project\bin\Debug\net5.0\HtmlAgilityPack.dll
+D:\Open Window\TERM 2\IDV\MineCount\Project\obj\Debug\net5.0\Project.csproj.CopyComplete
