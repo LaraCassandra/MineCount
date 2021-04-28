@@ -65,8 +65,8 @@ namespace Project
                             
                             if (path == "/index.html")
                                 data = Encoding.UTF8.GetBytes(IndexHtmlParser.Process(input));
-                            //else if (path == "/hello.html")
-                            //    data = Encoding.UTF8.GetBytes(HelloHtmlParser.Process(input));
+                            else if (path == "/test.html")
+                                data = Encoding.UTF8.GetBytes(TestHtmlParser.Process(input));
                             else 
                                 throw new FileNotFoundException("Not a page");
 
