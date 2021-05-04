@@ -1,0 +1,24 @@
+body {
+    margin: 0, 1500px, 0, 1500px;
+}
+
+#nav-logo {
+    max-height: 50px;
+    padding: 10px;
+}
+
+#main-nav {
+    background-color: #252525;
+}
+
+.logo {
+    max-height: 45px;
+}
+
+p {
+    margin: 10px;
+}
+
+.hero {
+    margin-bottom: 50px;
+}

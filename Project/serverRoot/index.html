@@ -6,18 +6,163 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>HttpListner Example</title>
+        <!-- TITLE-->
+        <title>MineCount</title>
+
+        <!-- FILE LINKS -->
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
     </head>
     <body>
 
-        <ul id="TheList">
-            
-            <li>item 1</li>
-            <li>item 2</li>
-            <li>item 3</li>
-            <li>item 4</li>
-        </ul>
 
+        <!-- NAV BAR -->
+        <nav class="navbar" id="nav-logo">
+
+            <div class="container">
+                <div class="navbar-menu">
+
+                    <div class="navbar-start">
+                        <i class="fas fa-image is-large" ></i>
+                    </div>
+                        
+                    <div class="field">
+                        <p class="control has-icons-right">
+                        <input class="input is-small" placeholder="Search">
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        </p>
+                    </div>
+                
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation" id="main-nav">
+
+            <div class="container">
+
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+            
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                  Home
+                </a>
+                
+                <a class="navbar-item" href="http://localhost:8000/inventory.html">
+                    Inventory
+                </a>
+                
+                <a class="navbar-item">
+                    Settings
+                </a>
+
+            </div>
+            
+              <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        
+                        <button class="button is-rounded">
+                            <span class="icon is-small">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </button>
+                        
+                        <button class="button is-rounded">
+                        <span class="icon is-small">
+                            <i class="fas fa-globe"></i>
+                        </span>
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</nav> <!-- END OF NAVBAR -->
+
+
+          <!-- MAIN CONTAINER -->
+          <div class="container">
+
+              <!-- HERO -->
+            <div class="hero is-small is-primary">
+                <div class="hero-body">
+
+                    <!-- Hero content: will be in the middle -->
+                    <div class="hero-body">
+                        <div class="container has-text-centered">
+                        <p class="title is-4">
+                            MineCount: Inventory Tracking
+                        </p>
+                        <p class="subtitle is-5">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis risus nec libero tristique iaculis sed a odio. Nulla a egestas lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque facilisis metus sem, vel varius justo gravida ac. 
+                        </p>
+
+                        <button class="button">Start Now</button>
+                        </div>
+                    </div>
+                      
+                </div>
+            </div>
+
+            <!-- SECTION 1 -->
+            <section class="section is-small">
+                <div class="columns is-vcentered">
+
+                    <div class="column">
+                        <img src="https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png" alt="info">
+                    </div>
+
+                    <div class="column has-text-centered">
+
+                        <p class="title is-4">More about MineCount</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis risus nec libero tristique iaculis sed a odio. Nulla a egestas lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque facilisis metus sem, vel varius justo gravida ac. Duis mollis placerat pulvinar.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECTION 2 -->
+            <section class="section is-small">
+                <div class="columns is-vcentered">
+                    
+                    <div class="column has-text-centered">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis risus nec libero tristique iaculis sed a odio. Nulla a egestas lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque facilisis metus sem, vel varius justo gravida ac. Duis mollis placerat pulvinar.</p>
+                    </div>
+
+                    <div class="column">
+                        <img src="https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png" alt="info">
+                    </div>
+
+                </div>
+            </section>
+        
+            
+            <ul id="TheList">
+                
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+            </ul>
+            
+        </div> <!-- END OF MAIN CONTAINER -->
     </body>
 </html>
