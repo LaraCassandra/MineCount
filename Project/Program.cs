@@ -67,6 +67,8 @@ namespace Project
                                 data = Encoding.UTF8.GetBytes(IndexHtmlParser.Process(input));
                             else if (path == "/inventory.html")
                                 data = Encoding.UTF8.GetBytes(InventoryHtmlParser.Process(input));
+                            else if (path == "/settings.html")
+                                data = Encoding.UTF8.GetBytes(SettingsHtmlParser.Process(input));
                             else 
                                 throw new FileNotFoundException("Not a page");
 
