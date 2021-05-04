@@ -2,6 +2,7 @@ using System;
 using System.Text;
 using System.IO;
 using HtmlAgilityPack;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Project 
@@ -9,6 +10,7 @@ namespace Project
 
     class InventoryHtmlParser
     {
+
         public static string Process(string input)
         {
             HtmlDocument htmlDoc = new HtmlDocument();
@@ -29,14 +31,23 @@ namespace Project
 
 
             // GET LIST ID
-            HtmlNode myNode = htmlDoc.GetElementbyId("ClassList");
+            HtmlNode myNode = htmlDoc.GetElementbyId("InventoryList");
 
             myNode.RemoveAllChildren();
 
-            string[] myItems = {"Step 1: Create Html file", "Step 2: Create Html Parser", "Step 3: ??", "Step 4: Profit"};
-            foreach (string currentString in myItems)
+            // Block block = new Block();
+
+            // List<Block> BlocksList = new List<Block>(){
+            //     new Block("dirt", 25),
+            //     new Block("sand", 55)
+            // };
+
+
+            Object[] BlocksList = {"dirt", "sand", "cobblestone"};
+
+            foreach (var currentString in BlocksList)
             {
-                HtmlNode newNode = HtmlNode.CreateNode("<li>" + currentString + "</li>");
+                HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card\"><div class=\"card-content\"><p>" + currentString + "</p></div></div>");
                 myNode.AppendChild(newNode);
             }
 
