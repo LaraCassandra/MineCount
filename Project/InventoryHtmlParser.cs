@@ -35,15 +35,7 @@ namespace Project
 
             myNode.RemoveAllChildren();
 
-            // Block block = new Block();
-
-            // List<Block> BlocksList = new List<Block>(){
-            //     new Block("dirt", 25),
-            //     new Block("sand", 55)
-            // };
-
-
-            Object[] BlocksList = {"dirt", "sand", "cobblestone"};
+            Object[] BlocksList = {"dirt", "sand", "cobblestone", "glass"};
 
             foreach (var currentString in BlocksList)
             {

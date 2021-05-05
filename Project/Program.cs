@@ -104,8 +104,46 @@ namespace Project
             }
         }
     
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+
+            Block[] blockArray = {new GlassBlock(1), new SandBlock(2), new Coal(10), new WoodBlock(5)};
+            foreach(Block myBlock in blockArray)
+            {
+                try
+                {
+                    Flammable flame = (Flammable)myBlock;
+                    flame.Burn();
+                }
+                catch(Exception e)
+                {}
+            }
+
+            // Block myBlock = new WoodBlock(1);
+            // Flammable myFlammable = (Flammable)myBlock;
+            // Meltable myMeltable = (Meltable)myBlock;
+
+            // myBlock.Place();
+            // myFlammable.Burn();
+            // myMeltable.Melt();
+
+            // // WORKING WITH BLOCK CLASS
+            // Block GlassBlock = new GlassBlock();
+            // Console.WriteLine(GlassBlock.BlockType);
+            
+            // // WOOD
+            // Meltable woodBlock = new WoodBlock(1);
+
+            // Block newCoal = woodBlock.Melt();
+
+            // // COAL
+            // Block myCoal1 = new Coal(1);
+            // Coal myCoal2 = new Coal(1);
+            // myCoal1.Place();
+            // myCoal2.Place();
+
+            // SandBlock mySand = new SandBlock(1);
+            // mySand.Place();
 
             // LISTEN FOR INCOMING CONNECTIONS
             listener = new HttpListener();

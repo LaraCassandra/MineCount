@@ -1,24 +1,46 @@
-        class Block 
+using System;
+
+namespace Project
+{
+    abstract class Block 
+    {
+        private int count;
+        protected string blockType;
+    
+        public int Count
         {
-            public Block(string name, int amount)
+            get 
             {
-                this.name = name;
-                this.amount = amount;
+                return count;
             }
-
-            private string name;
-            private int amount;
-
-            public string Name 
+            set
             {
-                get {return name;}
-                set {name = value;}
+                if (value < 0)
+                    count = -value;
+                else
+                    count = value;
             }
-
-            public int Amount 
-            {
-                get {return amount;}
-                set {amount = value;}
-            }
-        
         }
+
+        public string BlockType
+        {
+            get 
+            {
+                return blockType;
+            }
+        }
+
+        public Block()
+        {
+            count = 0;
+        }
+
+        public Block (int newCount)
+        {
+            count = newCount;
+        }
+
+        public abstract void Place();
+
+    }
+}
