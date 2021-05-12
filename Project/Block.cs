@@ -6,6 +6,8 @@ namespace Project
     {
         private int count;
         protected string blockType;
+
+        protected static Block classType;
     
         public int Count
         {
@@ -41,6 +43,11 @@ namespace Project
         }
 
         public abstract void Place();
+
+        public static Block get()
+        {
+            return classType;
+        }
 
     }
 }

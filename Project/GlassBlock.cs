@@ -2,7 +2,7 @@ using System;
 
 namespace Project 
 {
-    class GlassBlock : Block, Meltable
+    class GlassBlock : Block
     {
         public GlassBlock(): base()
         {
@@ -17,14 +17,6 @@ namespace Project
         {
             Count--;
             Console.WriteLine("Glass block has been placed");
-        }
-
-        public Block Melt()
-        {
-            Count--;
-            Console.WriteLine("Sand melts into glass");
-            return new SandBlock(1);
-
         }
 
     }
