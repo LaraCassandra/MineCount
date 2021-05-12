@@ -13,7 +13,7 @@ namespace Project
             classType = this;
         }
 
-        public override void Place()
+        public abstract void Place()
         {
             Count--;
             Console.WriteLine("Stick has been used");

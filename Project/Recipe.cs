@@ -13,5 +13,21 @@ namespace Project
             result = newResult;
             result.SetRecipe(this);
         }
+
+        public Block[,] Inputs 
+        {
+            get
+            {
+                return inputs;
+            }
+        }
+
+        public Block Result
+        {
+            get
+            {
+                return (Block) result;
+            }
+        }
     }
 }
