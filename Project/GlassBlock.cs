@@ -7,6 +7,7 @@ namespace Project
         public GlassBlock(): base()
         {
             blockType = "Glass Block";
+            classType = this;
         }
         public GlassBlock(int newCount): base(newCount)
         {
