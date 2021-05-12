@@ -23,7 +23,7 @@ namespace Project
             return recipe;
         }
 
-        public void setRecipe(Recipe newRecipe)
+        public void SetRecipe(Recipe newRecipe)
         {
             recipe = newRecipe;
         }
