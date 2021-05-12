@@ -10,7 +10,7 @@ namespace Project
         }
         public GoldIngot(int newCount): base(newCount)
         {
-            blockType = "Iron Ingot";
+            blockType = "Gold Ingot";
         }
 
         public override void Place()

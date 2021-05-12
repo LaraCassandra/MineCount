@@ -29,5 +29,37 @@ namespace Project
                 return (Block) result;
             }
         }
+
+        public bool IsViable()
+        {
+            var map = new Dictionary<string, int>();
+            
+            foreach (Block curBlock in inputs)
+            {
+                if(curBlock != null)
+                {
+                    int count;
+                    if (map.TryGetValue(curBlock.BlockType, out count))
+                    {
+                        map[curBlock.BlockType] += 1;
+                    }
+                    else 
+                    {
+                        map.Add(curBlock.BlockType, 1);
+                    }
+                }
+            }
+
+            bool result = true;
+            foreach(var pair in map)
+            {
+                if(pair.Value > Inventory.GetCount(pair.Key))
+                {
+                    result = false;
+                }
+            }
+
+            return result;
+        }
     }
 }

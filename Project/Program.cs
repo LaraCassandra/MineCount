@@ -108,10 +108,16 @@ namespace Project
         public static void Main(string[] args)
         {
 
-            // TODO: FIX WOOD.CS
             Inventory inventory = new Inventory();
-            Stick stick = (Stick) Stick.Get();
+            RecipeBook.Populate();
 
+            foreach (Recipe curRecipe in RecipeBook.Recipes)
+            {
+                Console.WriteLine("recipe is viable " +curRecipe.IsViable());
+            }
+
+//  todo: fix inventory get count 
+            Console.WriteLine("sand block" + Inventory.GetCount("Sand Block"));
 
             // ! CLASS WORK
             // Block[] blockArray = {new GlassBlock(1), new SandBlock(2), new Coal(10), new WoodBlock(5)};
