@@ -116,8 +116,9 @@ namespace Project
                 Console.WriteLine("recipe is viable " +curRecipe.IsViable());
             }
 
-//  todo: fix inventory get count 
-            Console.WriteLine("sand block" + Inventory.GetCount("Sand Block"));
+
+
+
 
             // ! CLASS WORK
             // Block[] blockArray = {new GlassBlock(1), new SandBlock(2), new Coal(10), new WoodBlock(5)};
