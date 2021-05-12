@@ -14,6 +14,7 @@ namespace Project
             items.Add(new GlassBlock(1));
             items.Add(new SandBlock(6));
             items.Add(new WoodBlock(10));
+            items.Add(new Stick(0));
         }
 
         public ArrayList Items 

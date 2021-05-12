@@ -108,10 +108,10 @@ namespace Project
         public static void Main(string[] args)
         {
 
+            // TODO: FIX WOOD.CS
             Inventory inventory = new Inventory();
-            ArrayList array = inventory.Items;
-            foreach(Block curBlock in array)
-                Console.WriteLine(curBlock.BlockType);
+            Stick stick = (Stick) Stick.Get();
+
 
             // ! CLASS WORK
             // Block[] blockArray = {new GlassBlock(1), new SandBlock(2), new Coal(10), new WoodBlock(5)};

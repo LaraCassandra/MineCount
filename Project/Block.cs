@@ -44,7 +44,7 @@ namespace Project
 
         public abstract void Place();
 
-        public static Block get()
+        public static Block Get()
         {
             return classType;
         }

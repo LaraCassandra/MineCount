@@ -2,20 +2,20 @@ using System;
 
 namespace Project
 {
-    class Stick: Block, Crafted
+    class WoodAxe: Block, Crafted
     {
-
         private Recipe recipe;
-        public Stick(int newCount): base(newCount)
+
+        public WoodAxe(int newCount): base(newCount)
         {
-            blockType = "Stick material";
+            blockType = "WoodAxe tool";
             classType = this;
         }
 
         public override void Place()
         {
             Count--;
-            Console.WriteLine("Stick has been used");
+            Console.WriteLine("WoodAxe has been placed");
         }
 
         public Recipe GetRecipe()
@@ -23,7 +23,7 @@ namespace Project
             return recipe;
         }
 
-        public void SetRecipe(Recipe newRecipe)
+        public void setRecipe(Recipe newRecipe)
         {
             recipe = newRecipe;
         }
