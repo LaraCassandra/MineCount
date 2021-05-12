@@ -7,6 +7,7 @@ namespace Project
         public Coal(int newCount) : base(newCount)
         {
             blockType = "Coal resource";
+            classType = this;
         }
 
         public override void Place()

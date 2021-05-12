@@ -3,6 +3,7 @@ using System.IO;
 using System.Text;
 using System.Net;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Project
 {
@@ -107,17 +108,23 @@ namespace Project
         public static void Main(string[] args)
         {
 
-            Block[] blockArray = {new GlassBlock(1), new SandBlock(2), new Coal(10), new WoodBlock(5)};
-            foreach(Block myBlock in blockArray)
-            {
-                try
-                {
-                    Flammable flame = (Flammable)myBlock;
-                    flame.Burn();
-                }
-                catch(Exception e)
-                {}
-            }
+            Inventory inventory = new Inventory();
+            ArrayList array = inventory.Items;
+            foreach(Block curBlock in array)
+                Console.WriteLine(curBlock.BlockType);
+
+            // ! CLASS WORK
+            // Block[] blockArray = {new GlassBlock(1), new SandBlock(2), new Coal(10), new WoodBlock(5)};
+            // foreach(Block myBlock in blockArray)
+            // {
+            //     try
+            //     {
+            //         Flammable flame = (Flammable)myBlock;
+            //         flame.Burn();
+            //     }
+            //     catch(Exception e)
+            //     {}
+            // }
 
             // Block myBlock = new WoodBlock(1);
             // Flammable myFlammable = (Flammable)myBlock;

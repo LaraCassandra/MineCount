@@ -1,0 +1,7 @@
+namespace Project
+{
+    interface Crafted
+    {
+
+    }
+}
