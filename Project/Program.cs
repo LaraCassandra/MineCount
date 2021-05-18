@@ -108,17 +108,15 @@ namespace Project
         public static void Main(string[] args)
         {
 
-            Inventory inventory = new Inventory();
-            RecipeBook.Populate();
+            // Inventory inventory = new Inventory();
+            // RecipeBook.Populate();
 
-            foreach (Recipe curRecipe in RecipeBook.Recipes)
-            {
-                Console.WriteLine("recipe is viable " +curRecipe.IsViable());
-            }
-
-
-
-
+            // foreach (Recipe curRecipe in RecipeBook.Recipes)
+            // {
+            //     Console.WriteLine("recipe is viable " +curRecipe.IsViable());
+            // }
+        
+            // Console.WriteLine(Inventory.GetCount("Glass block"));
 
             // ! CLASS WORK
             // Block[] blockArray = {new GlassBlock(1), new SandBlock(2), new Coal(10), new WoodBlock(5)};

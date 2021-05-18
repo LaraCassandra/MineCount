@@ -8,7 +8,7 @@ namespace Project
 
         public WoodAxe(int newCount): base(newCount)
         {
-            blockType = "WoodAxe tool";
+            blockType = "Wood Axe";
             classType = this;
         }
 

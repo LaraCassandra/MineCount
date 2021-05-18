@@ -27,23 +27,26 @@ namespace Project
 
                 if (count > 0)
                     throw new FileNotFoundException("File corrupt!");
+                    
             }
 
-
-            // GET LIST ID
+            // GET INVENTORY LIST
             HtmlNode myNode = htmlDoc.GetElementbyId("InventoryList");
-
+            // REMOVE CHILDREN FROM INVENTORY LIST
             myNode.RemoveAllChildren();
 
-            Object[] BlocksList = {"dirt", "sand", "cobblestone", "glass"};
-
-            foreach (var currentString in BlocksList)
+            // NEW INSTANCE OF INVENTORY
+            Inventory inventory = new Inventory();
+            
+            // POPULATE CARDS INTO INVENTORY LIST FROM ARRAY
+            foreach (Block item in inventory.Items)
             {
-                HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card\"><div class=\"card-content\"><p>" + currentString + "</p></div></div>");
+                HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card mb-4\"><div class=\"card-content\"><p>" + item.BlockType + "</p></div></div>");
                 myNode.AppendChild(newNode);
             }
 
             return htmlDoc.DocumentNode.InnerHtml;
+
         }
     }
 }

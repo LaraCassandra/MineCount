@@ -6,7 +6,7 @@ namespace Project
     {
         public Coal(int newCount) : base(newCount)
         {
-            blockType = "Coal resource";
+            blockType = "Coal";
             classType = this;
         }
 
