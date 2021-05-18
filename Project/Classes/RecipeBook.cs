@@ -53,6 +53,28 @@ namespace Project
             recipes.Add(stoneShovelRecipe);
             recipes.Add(stonePickaxeRecipe);
             recipes.Add(stoneSwordRecipe);
+
+            // ! IRON RECIPES
+            Recipe ironAxeRecipe = new Recipe((Crafted) IronAxe.Get(), new Block[3,3] {{IronIngot.Get(), IronIngot.Get(), null},
+                                                                                    {IronIngot.Get(), Stick.Get(), null},
+                                                                                    {null, Stick.Get(), null}});
+            
+            Recipe ironShovelRecipe = new Recipe((Crafted) IronShovel.Get(), new Block[3,3]{{null, IronIngot.Get(), null},
+                                                                                            {null, Stick.Get(), null},
+                                                                                            {null, Stick.Get(), null}});
+
+            Recipe ironPickaxeRecipe = new Recipe((Crafted) IronPickaxe.Get(), new Block[3,3]{{IronIngot.Get(), IronIngot.Get(), IronIngot.Get()},
+                                                                                            {null, Stick.Get(), null},
+                                                                                            {null, Stick.Get(), null}});
+
+            Recipe ironSwordRecipe = new Recipe((Crafted) IronSword.Get(), new Block[3,3]{{null, IronIngot.Get(), null},
+                                                                                            {null, IronIngot.Get(), null},
+                                                                                            {null, Stick.Get(), null}});
+            // ADD IRON RECIPES TO ARRAY
+            recipes.Add(ironAxeRecipe);
+            recipes.Add(ironShovelRecipe);
+            recipes.Add(ironPickaxeRecipe);
+            recipes.Add(ironSwordRecipe);
         }
 
         public static ArrayList Recipes

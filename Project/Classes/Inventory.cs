@@ -15,8 +15,6 @@ namespace Project
             items.Add(new GlassBlock(1));
             items.Add(new GoldIngot(1));
             items.Add(new GoldOreBlock(1));
-            items.Add(new IronIngot(1));
-            items.Add(new IronOreBlock(1));
             items.Add(new SandBlock(1));
             items.Add(new Stick(1));
 
@@ -34,6 +32,14 @@ namespace Project
             items.Add(new StoneAxe(1));
             items.Add(new StoneShovel(1));
             items.Add(new StoneSword(1));
+            
+            // IRON ITEMS
+            items.Add(new IronIngot(1));
+            items.Add(new IronOreBlock(1));
+            items.Add(new IronPickaxe(1));
+            items.Add(new IronAxe(1));
+            items.Add(new IronShovel(1));
+            items.Add(new IronSword(1));
 
         }
 
