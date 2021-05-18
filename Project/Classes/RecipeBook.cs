@@ -114,7 +114,7 @@ namespace Project
             Recipe diamondSwordRecipe = new Recipe((Crafted) DiamondSword.Get(), new Block[3,3]{{null, Diamond.Get(), null},
                                                                                             {null, Diamond.Get(), null},
                                                                                             {null, Stick.Get(), null}});
-            // ADD GOLD RECIPES TO ARRAY
+            // ADD DIAMOND RECIPES TO ARRAY
             recipes.Add(diamondAxeRecipe);
             recipes.Add(diamondShovelRecipe);
             recipes.Add(diamondPickaxeRecipe);
