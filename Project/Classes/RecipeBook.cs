@@ -97,6 +97,28 @@ namespace Project
             recipes.Add(goldShovelRecipe);
             recipes.Add(goldPickaxeRecipe);
             recipes.Add(goldSwordRecipe);
+
+            // ! DIAMOND RECIPES
+            Recipe diamondAxeRecipe = new Recipe((Crafted) DiamondAxe.Get(), new Block[3,3] {{Diamond.Get(), Diamond.Get(), null},
+                                                                                    {Diamond.Get(), Stick.Get(), null},
+                                                                                    {null, Stick.Get(), null}});
+            
+            Recipe diamondShovelRecipe = new Recipe((Crafted) DiamondShovel.Get(), new Block[3,3]{{null, Diamond.Get(), null},
+                                                                                            {null, Stick.Get(), null},
+                                                                                            {null, Stick.Get(), null}});
+
+            Recipe diamondPickaxeRecipe = new Recipe((Crafted) DiamondPickaxe.Get(), new Block[3,3]{{Diamond.Get(), Diamond.Get(), Diamond.Get()},
+                                                                                            {null, Stick.Get(), null},
+                                                                                            {null, Stick.Get(), null}});
+
+            Recipe diamondSwordRecipe = new Recipe((Crafted) DiamondSword.Get(), new Block[3,3]{{null, Diamond.Get(), null},
+                                                                                            {null, Diamond.Get(), null},
+                                                                                            {null, Stick.Get(), null}});
+            // ADD GOLD RECIPES TO ARRAY
+            recipes.Add(diamondAxeRecipe);
+            recipes.Add(diamondShovelRecipe);
+            recipes.Add(diamondPickaxeRecipe);
+            recipes.Add(diamondSwordRecipe);
         }
 
         public static ArrayList Recipes
