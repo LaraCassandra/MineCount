@@ -11,7 +11,6 @@ namespace Project
         public Inventory()
         {
             items.Add(new Coal(4));
-            items.Add(new Diamond(5));
             items.Add(new GlassBlock(1));
             items.Add(new SandBlock(1));
             items.Add(new Stick(1));
@@ -47,6 +46,12 @@ namespace Project
             items.Add(new GoldShovel(1));
             items.Add(new GoldSword(1));
 
+            // DIAMOND ITEMS
+            items.Add(new Diamond(5));
+            items.Add(new DiamondPickaxe(1));
+            items.Add(new DiamondAxe(1));
+            items.Add(new DiamondShovel(1));
+            items.Add(new DiamondSword(1));
         }
 
         public ArrayList Items 
