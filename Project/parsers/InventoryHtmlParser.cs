@@ -41,7 +41,8 @@ namespace Project
             // POPULATE CARDS INTO INVENTORY LIST FROM ARRAY
             foreach (Block item in inventory.Items)
             {
-                HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card mb-4\"><div class=\"card-content\"><p>" + item.BlockType + "</p></div></div>");
+                HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card mb-3\" style=\"max-width: 18rem; display: flex;\"><img class=\"card-img-top\" src=\""+ item.Image +"\"><div class=\"card-content\"><h5 class=\"card-title\">" + item.BlockType + "</h5></div></div>");
+                Console.WriteLine(newNode.OuterHtml);
                 myNode.AppendChild(newNode);
             }
 

@@ -20,6 +20,7 @@ namespace  Project
             {
                 case ".html": mimeType = "text/html"; break;
                 case ".jpg": mimeType = "image/jpeg"; break;
+                case ".png": mimeType = "image/png"; break;
                 case ".css" : mimeType = "text/css"; break;
                 case ".js" : mimeType = "text/javascript"; break;
             }

@@ -8,6 +8,7 @@ namespace Project
         {
             blockType = "Coal";
             classType = this;
+            image = "img/Coal.png";
         }
 
         public override void Place()

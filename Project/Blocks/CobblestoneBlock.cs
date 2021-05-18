@@ -12,6 +12,8 @@ namespace Project
         public CobblestoneBlock(int newCount) : base(newCount)
         {
             blockType = "Cobblestone block";
+            classType = this;
+            image = "img/CobblestoneBlock";
         }
 
         public override void Place()

@@ -6,6 +6,7 @@ namespace Project
     {
         private int count;
         protected string blockType;
+        protected string image;
 
         protected static Block classType;
     
@@ -29,6 +30,14 @@ namespace Project
             get 
             {
                 return blockType;
+            }
+        }
+
+        public string Image
+        {
+            get
+            {
+                return image;
             }
         }
 
