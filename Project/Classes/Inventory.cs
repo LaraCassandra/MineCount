@@ -13,8 +13,6 @@ namespace Project
             items.Add(new Coal(4));
             items.Add(new Diamond(5));
             items.Add(new GlassBlock(1));
-            items.Add(new GoldIngot(1));
-            items.Add(new GoldOreBlock(1));
             items.Add(new SandBlock(1));
             items.Add(new Stick(1));
 
@@ -40,6 +38,14 @@ namespace Project
             items.Add(new IronAxe(1));
             items.Add(new IronShovel(1));
             items.Add(new IronSword(1));
+
+            // GOLD ITEMS
+            items.Add(new GoldIngot(1));
+            items.Add(new GoldOreBlock(1));
+            items.Add(new GoldPickaxe(1));
+            items.Add(new GoldAxe(1));
+            items.Add(new GoldShovel(1));
+            items.Add(new GoldSword(1));
 
         }
 
