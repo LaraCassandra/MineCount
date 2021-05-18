@@ -119,6 +119,10 @@ namespace Project
             recipes.Add(diamondShovelRecipe);
             recipes.Add(diamondPickaxeRecipe);
             recipes.Add(diamondSwordRecipe);
+
+            // ! TORCH RECIPE
+            Recipe torchRecipe = new Recipe((Crafted) Torch.Get(), new Block[2,2] {{Coal.Get(), null},
+                                                                                    {Stick.Get(), null}});
         }
 
         public static ArrayList Recipes

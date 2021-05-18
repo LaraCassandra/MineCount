@@ -11,9 +11,10 @@ namespace Project
         public Inventory()
         {
             items.Add(new Coal(4));
+            items.Add(new Stick(1));
+            items.Add(new Torch(1));
             items.Add(new GlassBlock(1));
             items.Add(new SandBlock(1));
-            items.Add(new Stick(1));
 
             // WOOD ITEMS
             items.Add(new WoodBlock(1));
