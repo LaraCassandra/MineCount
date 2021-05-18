@@ -63,6 +63,17 @@ namespace Project
             }
         }
 
+        public static Block GetClass(string index)
+        {
+            foreach(Block curItem in items)
+            {
+                if(curItem.BlockType == index)
+                    return curItem;
+            }
+
+            return null;
+        }
+        
         public static int GetCount(string index)
         { 
             foreach (Block curItem in items)

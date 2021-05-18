@@ -123,6 +123,12 @@ namespace Project
             // ! TORCH RECIPE
             Recipe torchRecipe = new Recipe((Crafted) Torch.Get(), new Block[2,2] {{Coal.Get(), null},
                                                                                     {Stick.Get(), null}});
+            recipes.Add(torchRecipe);
+
+            // ! STICK RECIPE
+            Recipe stickRecipe = new Recipe((Crafted) Stick.Get(), new Block[2,2] {{WoodBlock.Get(), null},
+                                                                                    {WoodBlock.Get(), null}});
+            recipes.Add(stickRecipe);
         }
 
         public static ArrayList Recipes
