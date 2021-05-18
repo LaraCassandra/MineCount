@@ -10,7 +10,7 @@ namespace Project
         public static void Populate()
         {
 
-            // WOOD RECIPES
+            // ! WOOD RECIPES
             Recipe woodAxeRecipe = new Recipe((Crafted) WoodAxe.Get(), new Block[3,3] {{WoodBlock.Get(), WoodBlock.Get(), null},
                                                                                     {WoodBlock.Get(), Stick.Get(), null},
                                                                                     {null, Stick.Get(), null}});
@@ -32,7 +32,7 @@ namespace Project
             recipes.Add(woodPickaxeRecipe);
             recipes.Add(woodSwordRecipe);
 
-            // STONE RECIPES
+            // ! STONE RECIPES
             Recipe stoneAxeRecipe = new Recipe((Crafted) StoneAxe.Get(), new Block[3,3] {{CobblestoneBlock.Get(), CobblestoneBlock.Get(), null},
                                                                                     {CobblestoneBlock.Get(), Stick.Get(), null},
                                                                                     {null, Stick.Get(), null}});
