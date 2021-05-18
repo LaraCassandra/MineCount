@@ -5,9 +5,17 @@ namespace Project
 
     class WoodBlock: Block, Flammable, Meltable
     {
+        public WoodBlock(): base()
+        {
+            blockType = "Wood Block";
+            classType = this;
+            image = "img/WoodBlock.png";
+        }
         public WoodBlock(int newCount) :base(newCount)
         {
             blockType = "Wood block";
+            classType = this;
+            image = "img/WoodBlock.png";
         }
 
         public override void Place()

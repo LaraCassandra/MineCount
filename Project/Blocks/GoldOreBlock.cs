@@ -7,11 +7,15 @@ namespace Project
         public GoldOreBlock(): base()
         {
             blockType = "GoldOre Block";
+            classType = this;
+            image = "img/GoldOreBlock.png";
         }
         
         public GoldOreBlock(int newCount) : base(newCount)
         {
             blockType = "GoldOre block";
+            classType = this;
+            image = "img/GoldOreBlock.png";
         }
 
         public override void Place()

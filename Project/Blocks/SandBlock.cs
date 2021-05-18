@@ -7,11 +7,15 @@ namespace Project
         public SandBlock(): base()
         {
             blockType = "Sand Block";
+            classType = this;
+            image = "img/SandBlock.png";
         }
         
         public SandBlock(int newCount) : base(newCount)
         {
             blockType = "Sand block";
+            classType = this;
+            image = "img/SandBlock.png";
         }
 
         public override void Place()

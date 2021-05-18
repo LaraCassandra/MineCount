@@ -10,6 +10,7 @@ namespace Project
         {
             blockType = "Stick material";
             classType = this;
+            image = "img/Stick.png";
         }
 
         public override void Place()

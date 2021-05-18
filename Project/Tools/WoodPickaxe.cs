@@ -10,6 +10,7 @@ namespace Project
         {
             blockType = "Wood Pickaxe";
             classType = this;
+            image = "img/WoodPickaxe.png";
         }
 
         public override void Place()
