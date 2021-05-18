@@ -11,6 +11,7 @@ namespace Project
         public Inventory()
         {
             items.Add(new Coal(4));
+            items.Add(new CobblestoneBlock(4));
             items.Add(new Diamond(5));
             items.Add(new GoldIngot(1));
             items.Add(new GoldOreBlock(1));
