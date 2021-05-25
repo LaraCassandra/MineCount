@@ -111,6 +111,12 @@ namespace Project
             Inventory inventory = new Inventory();
             Console.WriteLine(Inventory.GetClass("Wood block").BlockType);
 
+            RecipeBook.Populate();
+            foreach (Recipe curRecipe in RecipeBook.Recipes)
+            {
+                Console.WriteLine("recipe is " + curRecipe.Result.BlockType);
+            }
+
             // Inventory inventory = new Inventory();
             // RecipeBook.Populate();
 
