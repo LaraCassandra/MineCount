@@ -10,49 +10,73 @@ namespace Project
 
         public Inventory()
         {
-            items.Add(new Coal(4));
-            items.Add(new Stick(1));
-            items.Add(new Torch(1));
-            items.Add(new GlassBlock(1));
-            items.Add(new SandBlock(1));
+            ArrayList data = Database.ReadBlocks();
 
-            // WOOD ITEMS
-            items.Add(new WoodBlock(1));
-            items.Add(new WoodAxe(1));
-            items.Add(new WoodPickaxe(1));
-            items.Add(new WoodShovel(1));
-            items.Add(new WoodSword(1));
+            foreach (Tuple<string, int> curTuple in data)
+            {
+                Block newBlock;
+                switch (curTuple.Item1)
+                {
+                    case "Wood block":
+                        newBlock = new WoodBlock(curTuple.Item2);
+                        break;
+                    case "Stick":
+                        newBlock = new Stick(curTuple.Item2);
+                        break;
+                    case "WoodAxe":
+                        newBlock = new WoodAxe(curTuple.Item2);
+                        break;
+                    default:
+                        newBlock = null;
+                        break;
+                }
+                items.Add(newBlock);
+            }
 
-            // STONE ITEMS
-            items.Add(new StoneBlock(1));
-            items.Add(new CobblestoneBlock(4));
-            items.Add(new StonePickaxe(1));
-            items.Add(new StoneAxe(1));
-            items.Add(new StoneShovel(1));
-            items.Add(new StoneSword(1));
+            // ! HARD CODED
+            // items.Add(new Coal(4));
+            // items.Add(new Stick(1));
+            // items.Add(new Torch(1));
+            // items.Add(new GlassBlock(1));
+            // items.Add(new SandBlock(1));
+
+            // // WOOD ITEMS
+            // items.Add(new WoodBlock(1));
+            // items.Add(new WoodAxe(1));
+            // items.Add(new WoodPickaxe(1));
+            // items.Add(new WoodShovel(1));
+            // items.Add(new WoodSword(1));
+
+            // // STONE ITEMS
+            // items.Add(new StoneBlock(1));
+            // items.Add(new CobblestoneBlock(4));
+            // items.Add(new StonePickaxe(1));
+            // items.Add(new StoneAxe(1));
+            // items.Add(new StoneShovel(1));
+            // items.Add(new StoneSword(1));
             
-            // IRON ITEMS
-            items.Add(new IronIngot(1));
-            items.Add(new IronOreBlock(1));
-            items.Add(new IronPickaxe(1));
-            items.Add(new IronAxe(1));
-            items.Add(new IronShovel(1));
-            items.Add(new IronSword(1));
+            // // IRON ITEMS
+            // items.Add(new IronIngot(1));
+            // items.Add(new IronOreBlock(1));
+            // items.Add(new IronPickaxe(1));
+            // items.Add(new IronAxe(1));
+            // items.Add(new IronShovel(1));
+            // items.Add(new IronSword(1));
 
-            // GOLD ITEMS
-            items.Add(new GoldIngot(1));
-            items.Add(new GoldOreBlock(1));
-            items.Add(new GoldPickaxe(1));
-            items.Add(new GoldAxe(1));
-            items.Add(new GoldShovel(1));
-            items.Add(new GoldSword(1));
+            // // GOLD ITEMS
+            // items.Add(new GoldIngot(1));
+            // items.Add(new GoldOreBlock(1));
+            // items.Add(new GoldPickaxe(1));
+            // items.Add(new GoldAxe(1));
+            // items.Add(new GoldShovel(1));
+            // items.Add(new GoldSword(1));
 
-            // DIAMOND ITEMS
-            items.Add(new Diamond(5));
-            items.Add(new DiamondPickaxe(1));
-            items.Add(new DiamondAxe(1));
-            items.Add(new DiamondShovel(1));
-            items.Add(new DiamondSword(1));
+            // // DIAMOND ITEMS
+            // items.Add(new Diamond(5));
+            // items.Add(new DiamondPickaxe(1));
+            // items.Add(new DiamondAxe(1));
+            // items.Add(new DiamondShovel(1));
+            // items.Add(new DiamondSword(1));
         }
 
         public ArrayList Items 
