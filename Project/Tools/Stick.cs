@@ -8,7 +8,7 @@ namespace Project
         private Recipe recipe;
         public Stick(int newCount): base(newCount)
         {
-            blockType = "Stick material";
+            blockType = "Stick";
             classType = this;
             image = "img/Stick.png";
         }
