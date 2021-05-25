@@ -118,6 +118,12 @@ namespace Project
                 Console.WriteLine("recipe is " + curRecipe.Result.BlockType);
             }
 
+            // Console.WriteLine(Inventory.GetClass("Wood block").Count);
+            // Inventory.GetClass("Wood block").Count++;
+            // Console.WriteLine(Inventory.GetClass("Wood block").Count);
+
+
+            // ! CLASS WORK
             // Recipe woodAxeRecipe = new Recipe((Crafted)Inventory.GetClass("WoodAxe"), new Block[3,3]
             //     {{Inventory.GetClass("Wood block"), Inventory.GetClass("Wood block"), null},
             //     {Inventory.GetClass("Wood block"), Inventory.GetClass("Stick"), null},
@@ -139,7 +145,6 @@ namespace Project
         
             // Console.WriteLine(Inventory.GetCount("Glass block"));
 
-            // ! CLASS WORK
             // Block[] blockArray = {new GlassBlock(1), new SandBlock(2), new Coal(10), new WoodBlock(5)};
             // foreach(Block myBlock in blockArray)
             // {

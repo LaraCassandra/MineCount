@@ -84,6 +84,21 @@ namespace Project
             cmd.ExecuteNonQuery();
         }
 
+        public static void UpdateBlockCount(string blockType, int count)
+        {
+            using var con = new MySqlConnection(serverConfiguration);
+            con.Open();
+
+            string sql = "UPDATE blocks SET count = @count WHERE blocktype = @blockType";
+            using var cmd = new MySqlCommand(sql, con);
+
+            cmd.Parameters.AddWithValue("@count", count);
+            cmd.Parameters.AddWithValue("@blockType", blockType);
+
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+        }
+
     }
 
 }
