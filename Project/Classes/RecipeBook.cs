@@ -150,5 +150,23 @@ namespace Project
                 return recipes;
             }
         }
+
+        public static void AddRecipe(Recipe recipe)
+        {
+            string blockType = recipe.Result.BlockType;
+
+            bool newRecipe = true;
+            foreach (Recipe curRecipe in recipes)
+            {
+                if (curRecipe.Result.BlockType == blockType)
+                    newRecipe = false;
+            }
+
+            if (newRecipe == true)
+            {
+                recipes.Add(recipe);
+                Database.AddRecipe(recipe);
+            }
+        }
     }
 }

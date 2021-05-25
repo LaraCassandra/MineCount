@@ -111,11 +111,23 @@ namespace Project
             Inventory inventory = new Inventory();
             Console.WriteLine(Inventory.GetClass("Wood block").BlockType);
 
+
             RecipeBook.Populate();
             foreach (Recipe curRecipe in RecipeBook.Recipes)
             {
                 Console.WriteLine("recipe is " + curRecipe.Result.BlockType);
             }
+
+            // Recipe woodAxeRecipe = new Recipe((Crafted)Inventory.GetClass("WoodAxe"), new Block[3,3]
+            //     {{Inventory.GetClass("Wood block"), Inventory.GetClass("Wood block"), null},
+            //     {Inventory.GetClass("Wood block"), Inventory.GetClass("Stick"), null},
+            //     {null, Inventory.GetClass("Stick"), null}});
+            // RecipeBook.AddRecipe(woodAxeRecipe);
+
+            // foreach (Recipe curRecipe in RecipeBook.Recipes)
+            // {
+            //     Console.WriteLine("recipe is " + curRecipe.Result.BlockType);
+            // }
 
             // Inventory inventory = new Inventory();
             // RecipeBook.Populate();

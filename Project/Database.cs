@@ -61,6 +61,29 @@ namespace Project
             return records;
         }
 
+        public static void AddRecipe(Recipe input)
+        {
+            using var con = new MySqlConnection(serverConfiguration);
+            con.Open();
+
+            string sql = "INSERT INTO recipes(result, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9) VALUES (@result, @i1, @i2, @i3, @i4, @i5, @i6, @i7, @i8, @i9)";
+            using var cmd = new MySqlCommand(sql, con);
+
+            cmd.Parameters.AddWithValue("@result", input.Result.BlockType);
+            cmd.Parameters.AddWithValue("@i1", input.Inputs[0,0] == null?"":input.Inputs[0,0].BlockType);
+            cmd.Parameters.AddWithValue("@i2", input.Inputs[0,1] == null?"":input.Inputs[0,1].BlockType);
+            cmd.Parameters.AddWithValue("@i3", input.Inputs[0,2] == null?"":input.Inputs[0,2].BlockType);
+            cmd.Parameters.AddWithValue("@i4", input.Inputs[1,0] == null?"":input.Inputs[1,0].BlockType);
+            cmd.Parameters.AddWithValue("@i5", input.Inputs[1,1] == null?"":input.Inputs[1,1].BlockType);
+            cmd.Parameters.AddWithValue("@i6", input.Inputs[1,2] == null?"":input.Inputs[1,2].BlockType);
+            cmd.Parameters.AddWithValue("@i7", input.Inputs[2,0] == null?"":input.Inputs[2,0].BlockType);
+            cmd.Parameters.AddWithValue("@i8", input.Inputs[2,1] == null?"":input.Inputs[2,1].BlockType);
+            cmd.Parameters.AddWithValue("@i9", input.Inputs[2,2] == null?"":input.Inputs[2,2].BlockType);
+
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+        }
+
     }
 
 }
