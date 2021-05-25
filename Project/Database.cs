@@ -61,6 +61,8 @@ namespace Project
             return records;
         }
 
+
+        // TODO: FIX ADDING RECIPES (GIVES ERROR)
         public static void AddRecipe(Recipe input)
         {
             using var con = new MySqlConnection(serverConfiguration);
