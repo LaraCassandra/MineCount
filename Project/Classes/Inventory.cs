@@ -8,7 +8,7 @@ namespace Project
     {
         private static ArrayList items = new ArrayList();
 
-        public Inventory()
+        public static void Populate()
         {
             
             ArrayList data = Database.ReadBlocks();

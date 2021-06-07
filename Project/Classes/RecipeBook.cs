@@ -10,28 +10,39 @@ namespace Project
         public static void Populate()
         {
 
+            ArrayList records = Database.ReadRecipes();
+
+            foreach(Tuple<string, string[,]> curTuple in records)
+            {
+                Recipe curRecipe = new Recipe((Crafted) Inventory.GetClass(curTuple.Item1), new Block[3,3]
+                    {{Inventory.GetClass(curTuple.Item2[0,0]), Inventory.GetClass(curTuple.Item2[0,1]), Inventory.GetClass(curTuple.Item2[0,2])},
+                    {Inventory.GetClass(curTuple.Item2[1,0]), Inventory.GetClass(curTuple.Item2[1,1]), Inventory.GetClass(curTuple.Item2[1,2])},
+                    {Inventory.GetClass(curTuple.Item2[2,0]), Inventory.GetClass(curTuple.Item2[2,1]), Inventory.GetClass(curTuple.Item2[2,2])}});
+                recipes.Add(curRecipe);
+            }
+
             // ! HARD CODED
             // // ! WOOD RECIPES
-            Recipe woodAxeRecipe = new Recipe((Crafted) WoodAxe.Get(), new Block[3,3] {{WoodBlock.Get(), WoodBlock.Get(), null},
-                                                                                    {WoodBlock.Get(), Stick.Get(), null},
-                                                                                    {null, Stick.Get(), null}});
+            // Recipe woodAxeRecipe = new Recipe((Crafted) WoodAxe.Get(), new Block[3,3] {{WoodBlock.Get(), WoodBlock.Get(), null},
+            //                                                                         {WoodBlock.Get(), Stick.Get(), null},
+            //                                                                         {null, Stick.Get(), null}});
             
-            Recipe woodShovelRecipe = new Recipe((Crafted) WoodShovel.Get(), new Block[3,3]{{null, WoodBlock.Get(), null},
-                                                                                            {null, Stick.Get(), null},
-                                                                                            {null, Stick.Get(), null}});
+            // Recipe woodShovelRecipe = new Recipe((Crafted) WoodShovel.Get(), new Block[3,3]{{null, WoodBlock.Get(), null},
+            //                                                                                 {null, Stick.Get(), null},
+            //                                                                                 {null, Stick.Get(), null}});
 
-            Recipe woodPickaxeRecipe = new Recipe((Crafted) WoodPickaxe.Get(), new Block[3,3]{{WoodBlock.Get(), WoodBlock.Get(), WoodBlock.Get()},
-                                                                                            {null, Stick.Get(), null},
-                                                                                            {null, Stick.Get(), null}});
+            // Recipe woodPickaxeRecipe = new Recipe((Crafted) WoodPickaxe.Get(), new Block[3,3]{{WoodBlock.Get(), WoodBlock.Get(), WoodBlock.Get()},
+            //                                                                                 {null, Stick.Get(), null},
+            //                                                                                 {null, Stick.Get(), null}});
 
-            Recipe woodSwordRecipe = new Recipe((Crafted) WoodSword.Get(), new Block[3,3]{{null, WoodBlock.Get(), null},
-                                                                                            {null, WoodBlock.Get(), null},
-                                                                                            {null, Stick.Get(), null}});
-            // ADD WOOD RECIPES TO ARRAY
-            recipes.Add(woodAxeRecipe);
-            recipes.Add(woodShovelRecipe);
-            recipes.Add(woodPickaxeRecipe);
-            recipes.Add(woodSwordRecipe);
+            // Recipe woodSwordRecipe = new Recipe((Crafted) WoodSword.Get(), new Block[3,3]{{null, WoodBlock.Get(), null},
+            //                                                                                 {null, WoodBlock.Get(), null},
+            //                                                                                 {null, Stick.Get(), null}});
+            // // ADD WOOD RECIPES TO ARRAY
+            // recipes.Add(woodAxeRecipe);
+            // recipes.Add(woodShovelRecipe);
+            // recipes.Add(woodPickaxeRecipe);
+            // recipes.Add(woodSwordRecipe);
 
             // // ! STONE RECIPES
             // Recipe stoneAxeRecipe = new Recipe((Crafted) StoneAxe.Get(), new Block[3,3] {{CobblestoneBlock.Get(), CobblestoneBlock.Get(), null},
