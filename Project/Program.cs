@@ -123,44 +123,9 @@ namespace Project
                 Console.WriteLine("recipe is " + curRecipe.Result.BlockType);
             }
 
-            // Console.WriteLine(Inventory.GetClass("Wood block").Count);
-            // Inventory.GetClass("Wood block").Count++;
-            // Console.WriteLine(Inventory.GetClass("Wood block").Count);
+            Inventory.GetClass("IronIngot").Count++;
+            Console.WriteLine(Inventory.GetClass("IronIngot").BlockType + Inventory.GetClass("IronIngot").Count);
 
-
-            // ! CLASS WORK
-            // Recipe woodAxeRecipe = new Recipe((Crafted)Inventory.GetClass("WoodAxe"), new Block[3,3]
-            //     {{Inventory.GetClass("Wood block"), Inventory.GetClass("Wood block"), null},
-            //     {Inventory.GetClass("Wood block"), Inventory.GetClass("Stick"), null},
-            //     {null, Inventory.GetClass("Stick"), null}});
-            // RecipeBook.AddRecipe(woodAxeRecipe);
-
-            // foreach (Recipe curRecipe in RecipeBook.Recipes)
-            // {
-            //     Console.WriteLine("recipe is " + curRecipe.Result.BlockType);
-            // }
-
-            // Inventory inventory = new Inventory();
-            // RecipeBook.Populate();
-
-            // foreach (Recipe curRecipe in RecipeBook.Recipes)
-            // {
-            //     Console.WriteLine("recipe is viable " +curRecipe.IsViable());
-            // }
-        
-            // Console.WriteLine(Inventory.GetCount("Glass block"));
-
-            // Block[] blockArray = {new GlassBlock(1), new SandBlock(2), new Coal(10), new WoodBlock(5)};
-            // foreach(Block myBlock in blockArray)
-            // {
-            //     try
-            //     {
-            //         Flammable flame = (Flammable)myBlock;
-            //         flame.Burn();
-            //     }
-            //     catch(Exception e)
-            //     {}
-            // }
 
             // Block myBlock = new WoodBlock(1);
             // Flammable myFlammable = (Flammable)myBlock;

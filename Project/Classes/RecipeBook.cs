@@ -165,6 +165,7 @@ namespace Project
             if (newRecipe == true)
             {
                 recipes.Add(recipe);
+                Database.AddRecipe(recipe);
             }
         }
     }
