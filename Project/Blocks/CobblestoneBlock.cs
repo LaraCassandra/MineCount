@@ -3,18 +3,10 @@ using System;
 namespace Project
 {
     class CobblestoneBlock : Block, Meltable
-    {
-        public CobblestoneBlock(): base()
-        {
-            blockType = "Cobblestone Block";
-            classType = this;
-            image = "img/CobblestoneBlock.png";
-            
-        }
-        
+    {       
         public CobblestoneBlock(int newCount) : base(newCount)
         {
-            blockType = "Cobblestone block";
+            blockType = "CobblestoneBlock";
             classType = this;
             image = "img/CobblestoneBlock.png";
         }

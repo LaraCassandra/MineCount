@@ -23,7 +23,6 @@ namespace Project
                 else
                     count = value;
 
-                    Database.UpdateBlockCount(blockType, count);
             }
         }
 

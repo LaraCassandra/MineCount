@@ -8,7 +8,7 @@ namespace Project
 
         public IronSword(int newCount): base(newCount)
         {
-            blockType = "Iron Sword";
+            blockType = "IronSword";
             classType = this;
             image = "img/IronSword.png";
         }

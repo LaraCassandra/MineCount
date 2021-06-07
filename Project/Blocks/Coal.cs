@@ -4,6 +4,12 @@ namespace Project
 {
     class Coal: Block, Flammable
     {
+        public Coal(): base()
+        {
+            blockType = "Coal";
+            classType = this;
+            image = "img/Coal.png";
+        }
         public Coal(int newCount) : base(newCount)
         {
             blockType = "Coal";

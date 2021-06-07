@@ -4,16 +4,9 @@ namespace Project
 {
     class SandBlock : Block, Meltable
     {
-        public SandBlock(): base()
-        {
-            blockType = "Sand Block";
-            classType = this;
-            image = "img/SandBlock.png";
-        }
-        
         public SandBlock(int newCount) : base(newCount)
         {
-            blockType = "Sand block";
+            blockType = "SandBlock";
             classType = this;
             image = "img/SandBlock.png";
         }

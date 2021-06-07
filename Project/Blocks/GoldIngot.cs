@@ -4,15 +4,9 @@ namespace Project
 {
     class GoldIngot : Block
     {
-        public GoldIngot(): base()
-        {
-            blockType = "Gold Ingot";
-            classType = this;
-            image = "img/GoldIngot.png";
-        }
         public GoldIngot(int newCount): base(newCount)
         {
-            blockType = "Gold Ingot";
+            blockType = "GoldIngot";
             classType = this;
             image = "img/GoldIngot.png";
         }

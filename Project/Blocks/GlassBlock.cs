@@ -4,15 +4,9 @@ namespace Project
 {
     class GlassBlock : Block
     {
-        public GlassBlock(): base()
-        {
-            blockType = "Glass Block";
-            classType = this;
-            image = "img/GlassBlock.png";
-        }
         public GlassBlock(int newCount): base(newCount)
         {
-            blockType = "Glass block";
+            blockType = "GlassBlock";
             classType = this;
             image = "img/GlassBlock.png";
         }

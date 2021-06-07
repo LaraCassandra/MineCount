@@ -108,15 +108,20 @@ namespace Project
         public static void Main(string[] args)
         {
 
+            Console.WriteLine(Database.GetVersion());
+            
             Inventory inventory = new Inventory();
-            Console.WriteLine(Inventory.GetClass("Wood block").BlockType);
+            Console.WriteLine(Inventory.GetClass("Wood block").BlockType + Inventory.GetClass("Wood block").Count);
+            Console.WriteLine(Inventory.GetClass("Stick").BlockType + Inventory.GetClass("Stick").Count);
+            Console.WriteLine(Inventory.GetClass("WoodSword").BlockType + Inventory.GetClass("WoodSword").Count);
+            Console.WriteLine(Inventory.GetClass("IronIngot").BlockType + Inventory.GetClass("IronIngot").Count);
 
 
-            RecipeBook.Populate();
-            foreach (Recipe curRecipe in RecipeBook.Recipes)
-            {
-                Console.WriteLine("recipe is " + curRecipe.Result.BlockType);
-            }
+            // RecipeBook.Populate();
+            // foreach (Recipe curRecipe in RecipeBook.Recipes)
+            // {
+            //     Console.WriteLine("recipe is " + curRecipe.Result.BlockType);
+            // }
 
             // Console.WriteLine(Inventory.GetClass("Wood block").Count);
             // Inventory.GetClass("Wood block").Count++;

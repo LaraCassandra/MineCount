@@ -8,7 +8,7 @@ namespace Project
 
         public GoldAxe(int newCount): base(newCount)
         {
-            blockType = "Gold Axe";
+            blockType = "GoldAxe";
             classType = this;
             image = "img/GoldAxe.png";
         }

@@ -8,7 +8,7 @@ namespace Project
 
         public IronPickaxe(int newCount): base(newCount)
         {
-            blockType = "Iron Pickaxe";
+            blockType = "IronPickaxe";
             classType = this;
             image = "img/IronPickaxe.png";
         }

@@ -8,7 +8,7 @@ namespace Project
 
         public StoneShovel(int newCount): base(newCount)
         {
-            blockType = "Stone Shovel";
+            blockType = "StoneShovel";
             classType = this;
             image = "img/StoneShovel.png";
         }

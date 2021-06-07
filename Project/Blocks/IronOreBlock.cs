@@ -3,17 +3,10 @@ using System;
 namespace Project
 {
     class IronOreBlock : Block, Meltable
-    {
-        public IronOreBlock(): base()
-        {
-            blockType = "IronOre Block";
-            classType = this;
-            image = "img/IronOreBlock.png";
-        }
-        
+    {        
         public IronOreBlock(int newCount) : base(newCount)
         {
-            blockType = "IronOre block";
+            blockType = "IronOreBlock";
             classType = this;
             image = "img/IronOreBlock.png";
         }

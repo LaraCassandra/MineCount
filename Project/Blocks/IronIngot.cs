@@ -6,13 +6,13 @@ namespace Project
     {
         public IronIngot(): base()
         {
-            blockType = "Iron Ingot";
+            blockType = "IronIngot";
             classType = this;
             image = "img/IronIngot.png";
         }
         public IronIngot(int newCount): base(newCount)
         {
-            blockType = "Iron Ingot";
+            blockType = "IronIngot";
             classType = this;
             image = "img/IronIngot.png";
         }
