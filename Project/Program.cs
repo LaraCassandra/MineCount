@@ -123,8 +123,8 @@ namespace Project
                 Console.WriteLine("recipe is " + curRecipe.Result.BlockType);
             }
 
-            Inventory.GetClass("IronIngot").Count++;
-            Console.WriteLine(Inventory.GetClass("IronIngot").BlockType + Inventory.GetClass("IronIngot").Count);
+            // Inventory.GetClass("IronIngot").Count++;
+            // Console.WriteLine(Inventory.GetClass("IronIngot").BlockType + Inventory.GetClass("IronIngot").Count);
 
 
             // Block myBlock = new WoodBlock(1);

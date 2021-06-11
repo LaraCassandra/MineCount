@@ -41,7 +41,8 @@ namespace Project
             // POPULATE CARDS INTO INVENTORY LIST FROM ARRAY
             foreach (Block item in inventory.Items)
             {
-                HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card mb-3\" style=\"max-width: 18rem; display: flex;\"><img class=\"card-img-top\" src=\""+ item.Image +"\"><div class=\"card-content\"><h5 class=\"card-title\">" + item.BlockType + "</h5><p class=\"card-text\">" + item.Count +"</p></div></div>");
+                // HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card mb-3\"><div class=\"media\"><figure class=\"image is-48x48\"><img src=\""+ item.Image +"\"></figure><div><h5 class=\"title is-6\">" + item.BlockType + "</h5></div></div><div class=\"card-content\">" + "Count: " + item.Count +"</div></div></div>");
+                HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card mb-3\"><div class=\"card-content\"><div class=\"media\"><div class\"media-left\"><figure class=\"image is-48x48\"><img src=\""+ item.Image +"\"></figure></div><div class=\"media-content\"><p class=\"title is-6\">"+ item.BlockType +"</p></div></div><div class=\"content\"> Count: " + item.Count +"<div><footer class=\"card-footer\"><a class=\"card-footer-item\">-</a><a class=\"card-footer-item\">+</a></footer></div></div>");
                 Console.WriteLine(newNode.OuterHtml);
                 myNode.AppendChild(newNode);
             }
