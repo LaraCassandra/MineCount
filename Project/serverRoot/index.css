@@ -13,6 +13,10 @@ body {
     background-color: #252525;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 
 .logo {
     max-height: 45px;
@@ -69,15 +73,41 @@ INVENTORY
 */
 #InventoryList {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-	grid-gap: 0.5em;
+	grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+	grid-gap: 0.7em;
 }
 
 .card {
-    min-width: 10rem;
+    padding: 50dp;
 }
 
-.media {
-    text-align: center;
+.recipe-box {
+    width: 100%;
+    height: 200px;
+    background-color: #252525;
+    border: 5px solid #488021;
+    margin: 20px 0;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 60px;
+}
+
+.recipe-box h1{
+    color: #fff;
+}
+
+.input {
+    width: 50%;
+}
+
+.column{
+    width: 100%;
+    height: auto;
+    background-color: #252525;
+    border: 5px solid #488021;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }

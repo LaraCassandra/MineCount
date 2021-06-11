@@ -41,10 +41,9 @@ namespace Project
             // POPULATE CARDS INTO INVENTORY LIST FROM ARRAY
             foreach (Block item in inventory.Items)
             {
-                // HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card mb-3\"><div class=\"media\"><figure class=\"image is-48x48\"><img src=\""+ item.Image +"\"></figure><div><h5 class=\"title is-6\">" + item.BlockType + "</h5></div></div><div class=\"card-content\">" + "Count: " + item.Count +"</div></div></div>");
-                HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card mb-3\"><div class=\"card-content\"><div class=\"media\"><div class\"media-left\"><figure class=\"image is-48x48\"><img src=\""+ item.Image +"\"></figure></div><div class=\"media-content\"><p class=\"title is-6\">"+ item.BlockType +"</p></div></div><div class=\"content\"> Count: " + item.Count +"<div><footer class=\"card-footer\"><a class=\"card-footer-item\">-</a><a class=\"card-footer-item\">+</a></footer></div></div>");
-                Console.WriteLine(newNode.OuterHtml);
+                HtmlNode newNode = HtmlNode.CreateNode("<div class=\"card mb-3\"><div class=\"card-image\"><figure class=\"image is-96x96\"><img src=\"" + item.Image + "\" alt=\"" +item.BlockType + "\"></figure></div><div class=\"card-content\"><p class=\"title is-6\">" + item.BlockType + " | Count: " + item.Count + "</p></div><footer class=\"card-footer\"><div class=\"card-footer-item\"><label for=\""+ item.BlockType +"\">Change Count: </label><input type=\"text\" name=\""+ item.BlockType +"\" value=\""+ item.Count +"\"/><input type=\"submit\" value=\"Set Count\"></div></footer></div>");
                 myNode.AppendChild(newNode);
+                // myNode.AppendChild(newNode);
             }
 
             return htmlDoc.DocumentNode.InnerHtml;

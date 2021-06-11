@@ -33,7 +33,45 @@ namespace Project
                 Console.WriteLine(req.HttpMethod);
                 Console.WriteLine(req.UserHostName);
                 Console.WriteLine(req.UserAgent);
+                Console.WriteLine("Has entity body: " + req.HasEntityBody);
                 Console.WriteLine();
+
+                if(req.HasEntityBody)
+                {
+                    System.IO.Stream body = req.InputStream;
+                    System.Text.Encoding encoding = req.ContentEncoding;
+                    System.IO.StreamReader reader = new System.IO.StreamReader(body, encoding);
+                    if(req.ContentType != null)
+                    {
+                        Console.WriteLine("Client data content type: " + req.ContentType);
+                    }
+                    Console.WriteLine("Client data content length: " + req.ContentLength64);
+                    
+                    Console.WriteLine("Start of data:");
+                    string data = reader.ReadToEnd();
+                    Console.WriteLine(data);
+                    Console.WriteLine("End of data:");
+                    body.Close();
+                    reader.Close();
+
+                    string[] properties = data.Split('&');
+                    foreach(string curProp in properties)
+                    {
+                        string[] pair = curProp.Split('=');
+                        string key = pair[0].Replace('+', ' ');
+                        
+                        if(key == "recipe")
+                        {
+                            RecipeBook.ApplyRecipe(pair[1].Replace('+', ' '));
+                        }
+                        else if (Inventory.GetClass(key) != null)
+                        {
+                            int value = Int32.Parse(pair[1]);
+                            Inventory.GetClass(key).Count = value;
+                        }
+                    }
+
+                }
 
                 string path = req.Url.AbsolutePath;
 
@@ -68,8 +106,6 @@ namespace Project
                                 data = Encoding.UTF8.GetBytes(IndexHtmlParser.Process(input));
                             else if (path == "/inventory.html")
                                 data = Encoding.UTF8.GetBytes(InventoryHtmlParser.Process(input));
-                            else if (path == "/recipes.html")
-                                data = Encoding.UTF8.GetBytes(RecipesHtmlParser.Process(input));
                             else 
                                 throw new FileNotFoundException("Not a page");
 
@@ -122,36 +158,6 @@ namespace Project
             {
                 Console.WriteLine("recipe is " + curRecipe.Result.BlockType);
             }
-
-            // Inventory.GetClass("IronIngot").Count++;
-            // Console.WriteLine(Inventory.GetClass("IronIngot").BlockType + Inventory.GetClass("IronIngot").Count);
-
-
-            // Block myBlock = new WoodBlock(1);
-            // Flammable myFlammable = (Flammable)myBlock;
-            // Meltable myMeltable = (Meltable)myBlock;
-
-            // myBlock.Place();
-            // myFlammable.Burn();
-            // myMeltable.Melt();
-
-            // // WORKING WITH BLOCK CLASS
-            // Block GlassBlock = new GlassBlock();
-            // Console.WriteLine(GlassBlock.BlockType);
-            
-            // // WOOD
-            // Meltable woodBlock = new WoodBlock(1);
-
-            // Block newCoal = woodBlock.Melt();
-
-            // // COAL
-            // Block myCoal1 = new Coal(1);
-            // Coal myCoal2 = new Coal(1);
-            // myCoal1.Place();
-            // myCoal2.Place();
-
-            // SandBlock mySand = new SandBlock(1);
-            // mySand.Place();
 
             // LISTEN FOR INCOMING CONNECTIONS
             listener = new HttpListener();

@@ -65,9 +65,9 @@
                         Inventory
                     </a>
                     
-                    <a class="navbar-item" href="http://localhost:8000/recipes.html">
+                    <a class="navbar-item">
                         <img src="./img/CraftTable.png" style="margin-right: 10px;"/>
-                        Recipes
+                        Settings
                     </a>
 
                 </div>
@@ -101,15 +101,30 @@
     <!-- MAIN CONTAINER -->
     <div class="container">
 
+        <div class="recipe-box">
+
+            <h1 class="title is-4">Craft your Recipe</h1>
+
+            
+            <form action="/inventory.html" method="POST" id="recipeForm">
+                <input type="text" id="inputRecipe" name="recipe" value="" class="input is-normal" placeholder="The Item you want to craft; eg. Stick">
+                <input type="submit" value="Craft" class="button is-medium" style="width: 100%; background-color: #488021; border: none; color: #fff; margin-top: 5px;">
+            </form>
+        
+        </div>
+
+
         <!-- COLUMNS -->
         <div class="columns">
 
-            <!-- COLUMN 2 -->
+            <!-- COLUMN  -->
             <div class="column is-two-quarters">
 
-                <div id="InventoryList" class="card-group">
-                    <div class="card"></div>
-                </div>
+                <form action="/inventory.html" method="POST">
+                    <div id="InventoryList" class="card-group">
+                        <div class="card"></div>
+                    </div>
+                </form>
 
             </div><!-- END OF COLUMN 2 -->
         </div><!-- END OF COLUMNS -->
@@ -126,7 +141,19 @@
               <div class="border"></div>
 
     <!-- JAVASCRIPT LINKS -->
-    <script src="./js/functions.js"></script>
+    <script>
+        function changeMinusSubmit(event)
+        {
+            document.getElementById("minusBlock").value = event.submitter.value;
+        }
+        document.getElementById("minusForm").addEventListener('submit', changeMinusSubmit);
+
+        function changeAddSubmit(event)
+        {
+            document.getElementById("addBlock").value = event.submitter.value;
+        }
+        document.getElementById("addForm").addEventListener('submit', changeAddSubmit);
+    </script>
 
 </body>
 </html>
