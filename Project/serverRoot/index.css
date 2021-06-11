@@ -101,7 +101,7 @@ INVENTORY
     width: 50%;
 }
 
-.column{
+.inventory-box{
     width: 100%;
     height: auto;
     background-color: #252525;
@@ -111,3 +111,14 @@ INVENTORY
     justify-content: center;
     text-align: center;
 }
+
+/* .text-box{
+    width: 100%;
+    height: 100%;
+    background-color: #252525;
+    border: 5px solid #488021;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+} */
