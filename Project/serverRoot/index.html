@@ -58,16 +58,19 @@
             
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item">
+                <a class="navbar-item is-active">
+                    <img src="./img/GrassBlock.png" style="margin-right: 10px;"/>
                   Home
                 </a>
                 
                 <a class="navbar-item" href="http://localhost:8000/inventory.html">
+                    <img src="./img/Chest.png" style="margin-right: 10px;"/>
                     Inventory
                 </a>
                 
-                <a class="navbar-item" href="http://localhost:8000/settings.html">
-                    Settings
+                <a class="navbar-item" href="http://localhost:8000/recipes.html">
+                    <img src="./img/CraftTable.png" style="margin-right: 10px;"/>
+                    Recipes
                 </a>
 
             </div>
@@ -96,16 +99,18 @@
 
 </nav> <!-- END OF NAVBAR -->
 
+<div class="border"></div>
+
 
           <!-- MAIN CONTAINER -->
           <div class="container">
 
               <!-- HERO -->
-            <div class="hero is-small is-info">
+            <div class="hero is-medium">
                 <div class="hero-body">
 
                     <!-- Hero content: will be in the middle -->
-                    <div class="hero-body">
+
                         <div class="container has-text-centered">
                         <p class="title is-4">
                             MineCount: Inventory Tracking
@@ -114,8 +119,8 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis risus nec libero tristique iaculis sed a odio. Nulla a egestas lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque facilisis metus sem, vel varius justo gravida ac. 
                         </p>
 
-                        <button class="button">Start Now</button>
-                        </div>
+                        <button class="btn">Start Now</button>
+
                     </div>
                       
                 </div>
@@ -126,12 +131,14 @@
                 <div class="columns is-vcentered">
 
                     <div class="column">
-                        <img src="https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png" alt="info">
+                        <img src="./img/image1.jpg" alt="info" id="info-img">
                     </div>
 
-                    <div class="column has-text-centered">
+                    <div class="column has-text-centered" style="margin: 0dp ,20px;">
 
-                        <p class="title is-4">More about MineCount</p>
+                        <p class="title is-4"style="color: white;" >
+                            More about MineCount
+                        </p>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis risus nec libero tristique iaculis sed a odio. Nulla a egestas lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque facilisis metus sem, vel varius justo gravida ac. Duis mollis placerat pulvinar.</p>
                     </div>
@@ -144,37 +151,30 @@
                 <div class="columns is-vcentered">
                     
                     <div class="column has-text-centered">
+                        <p class="title is-4" style="color: white;">
+                            Our Story
+                        </p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis risus nec libero tristique iaculis sed a odio. Nulla a egestas lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque facilisis metus sem, vel varius justo gravida ac. Duis mollis placerat pulvinar.</p>
                     </div>
 
                     <div class="column">
-                        <img src="https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png" alt="info">
+                        <img src="./img/image2.jpg" alt="info" info-img>
                     </div>
 
                 </div>
             </section>
-        
-            
-            <ul id="TheList">
-                
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
-                <li>item 4</li>
-            </ul>
             
         </div> <!-- END OF MAIN CONTAINER -->
 
         <!-- FOOTER -->
-        <footer class="footer is-dark">
+        <footer class="page-footer">
             <div class="content has-text-centered">
-              <p>
-                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-              </p>
+                <p>
+                    <strong>Copyright © Open Window Institute. All rights reserved.</strong>
+                  </p>
             </div>
           </footer> <!-- END OF FOOTER -->
+          <div class="border"></div>
 
     </body>
 </html>

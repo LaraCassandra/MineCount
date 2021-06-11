@@ -21,7 +21,7 @@
 <body>
     
     <!-- NAV BAR -->
-    <nav class="navbar" id="nav-logo">
+    <nav class="navbar nav-top" id="nav-logo">
 
         <div class="container">
             <div class="navbar-menu">
@@ -55,16 +55,19 @@
             
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="http://localhost:8000/index.html">
+                        <img src="./img/GrassBlock.png" style="margin-right: 10px;"/>
                         Home
                     </a>
-                
-                    <a class="navbar-item" href="http://localhost:8000/inventory.html">
+                    
+                    <a class="navbar-item is-active" href="http://localhost:8000/inventory.html">
+                        <img src="./img/Chest.png" style="margin-right: 10px;"/>
                         Inventory
                     </a>
                     
-                    <a class="navbar-item" href="http://localhost:8000/settings.html">
-                        Settings
+                    <a class="navbar-item" href="http://localhost:8000/recipes.html">
+                        <img src="./img/CraftTable.png" style="margin-right: 10px;"/>
+                        Recipes
                     </a>
 
                 </div>
@@ -92,32 +95,14 @@
         </div>
     </nav> <!-- END OF NAVBAR -->
 
+    <div class="border"></div>
+
 
     <!-- MAIN CONTAINER -->
     <div class="container">
 
         <!-- COLUMNS -->
         <div class="columns">
-
-            <!-- COLUMN 1 -->
-            <div class="colum is-one-quarter">
-                <article class="panel" style="min-width: 16rem;">
-                    <div class="panel-block">
-                    </div>
-                    <a class="panel-block is-active inventory-panel">
-                      <span class="panel-icon">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                      </span>
-                      Inventory
-                    </a>
-                    <a class="panel-block recipes-panel">
-                      <span class="panel-icon">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                      </span>
-                      Recipes
-                    </a>
-                  </article>
-            </div><!-- END OF COLUMN 1-->
 
             <!-- COLUMN 2 -->
             <div class="column is-two-quarters">
@@ -129,6 +114,16 @@
             </div><!-- END OF COLUMN 2 -->
         </div><!-- END OF COLUMNS -->
     </div><!-- END OF MAIN CONTAINER -->
+
+            <!-- FOOTER -->
+            <footer class="page-footer">
+                <div class="content has-text-centered">
+                    <p>
+                        <strong>Copyright © Open Window Institute. All rights reserved.</strong>
+                      </p>
+                </div>
+              </footer> <!-- END OF FOOTER -->
+              <div class="border"></div>
 
     <!-- JAVASCRIPT LINKS -->
     <script src="./js/functions.js"></script>
