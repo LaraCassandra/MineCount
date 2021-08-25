@@ -32,10 +32,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">RONA</h3>
+  <h3 align="center">MineCount</h3>
 
   <p align="center">
-    Covid-19 Screening
+    Minecraft Inventory Tracking Application
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
