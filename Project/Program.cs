@@ -66,6 +66,7 @@ namespace Project
                         }
                         else if (Inventory.GetClass(key) != null)
                         {
+                            
                             int value = Int32.Parse(pair[1]);
                             Inventory.GetClass(key).Count = value;
                         }

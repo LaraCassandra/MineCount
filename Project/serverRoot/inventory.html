@@ -55,30 +55,20 @@
     <!-- MAIN CONTAINER -->
     <div class="container-fluid main">
 
-        <div class="container">
+        <h2 class="text-center text-responsive-extra">Your Inventory</h2>
+        <p class="text-center text-responsive-extra">See all your items and start crafting</p>
 
-            <h2 class="text-center text-responsive-extra">Your Inventory</h2>
-            <p class="text-center text-responsive-extra">See all your items and start crafting</p>
+        <div class="container justify-content-center text-center" style="margin-top: 20px; margin-bottom: 30px;">
             
-            <div class="recipe-box">
-                
-            <h1 class="title is-4">Craft your Item</h1>
-            
-            
-            <form action="/inventory.html" method="POST" id="recipeForm">
-                <input type="text" id="inputRecipe" name="recipe" value="" class="input is-normal" placeholder="The Item you want to craft; eg. Stick">
-                <input type="submit" value="Craft" class="button is-medium" style="width: 100%; background-color: #488021; border: none; color: #fff; margin-top: 5px;">
+            <form action="/inventory.html" method="POST" id="recipeForm" class="d-block">
+                <input id="inputRecipe" name="recipe" value="" class="input" placeholder="Type what you want to craft..." style="min-width: 48%; padding: 10px; border-radius: 12px;">
+                <br>
+                <input type="submit" value="Craft" class="btn" style="background-color: #289A5C; color: #fff; border-radius: 12px; font-weight: bold; padding: 10px 80px; width: 48%; font-size: 15px; box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2); margin-top: 10px;">
             </form>
-        
         </div>
-        
 
-        <!-- <form action="/inventory.html" method="POST">
-            <div id="InventoryList" class="card-group">
-                <div class="card"></div>
-                    </div>
-                </form> -->
-                
+        <div class="container justify-content-center">
+
                 <form action="/inventory.html" method="POST">
                     <div id="InventoryList" class="row row-cols-1 row-cols-md-4 g-4">
                         
@@ -90,16 +80,27 @@
                                     <p class="card-text">Change Count:</p>
 
                                     <div class="d-inline">
-                                        <input type="text" name="" value="" />
-                                        <input style="background-color: #289A5C; color: #fff; border-radius: 12px; font-weight: bold; padding: 10px 60px; font-size: 15px; box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2); margin-top: 10px;" class="btn" type="submit" value="Set Count"/>
+                                        <form action="/inventory.html" method="POST">
+                                            <input type="text" name="" value="" />
+                                            <input style="background-color: #289A5C; color: #fff; border-radius: 12px; font-weight: bold; padding: 10px 60px; font-size: 15px; box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2); margin-top: 10px;" class="btn" type="submit" value="Set Count"/>
+                                        </form>
                                     </div>
+
+                                    <form action="/inventory.html" method="POST" id="recipeForm">
+                                        <input id="inputRecipe" name="recipe" value="" class="input">
+                                        <input type="submit" value="Craft" class="btn" style="background-color: #000000; color: #fff; border-radius: 12px; font-weight: bold; padding: 10px 60px; font-size: 15px; box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2); margin-top: 10px;">
+                                    </form>
+
+                                    <div id="RecipeList">
+                    
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                         
                     </div>
-                </form>
-                    
+                </form>                   
                 
             </div>
         </div><!-- END OF MAIN CONTAINER -->
