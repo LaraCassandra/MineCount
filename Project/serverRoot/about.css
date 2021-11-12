@@ -1,0 +1,43 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    max-height: 100vh;
+    background-image: url(./img/header.png);
+    z-index: 999;
+    background-position: center;
+    background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+    color: #9F9F9F;
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.overlay {
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    margin: auto;
+    padding-top: 15vh;
+}
+
+.card-title {
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.card-text {
+    font-weight: normal;
+    font-family: 'Noto Sans', sans-serif;
+    
+}

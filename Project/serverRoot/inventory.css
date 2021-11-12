@@ -14,11 +14,13 @@ body {
     background-color: #000000;
     min-height: 100vh;
     overflow-x: hidden;
+
 }
 
 .main {
     background-color: #000000;
     min-height: 100vh;
+    padding-top: 10vh;
 }
 
 .card-title {
