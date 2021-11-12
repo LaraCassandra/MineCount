@@ -12,4 +12,17 @@ p {
 
 body {
     background-color: #000000;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.main {
+    background-color: #000000;
+    min-height: 100vh;
+}
+
+.card-title {
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 15px;
 }

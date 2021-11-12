@@ -38,10 +38,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="http://localhost:8000/index.html">Home</a>
+                <a class="nav-link " aria-current="page" href="http://localhost:8000/index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost:8000/inventory.html">Inventory</a>
+                <a class="nav-link active" href="http://localhost:8000/inventory.html">Inventory</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
@@ -53,54 +53,62 @@
 
 
     <!-- MAIN CONTAINER -->
-    <div class="container">
+    <div class="container-fluid main">
 
-        <div class="recipe-box">
+        <div class="container">
 
+            <h2 class="text-center text-responsive-extra">Your Inventory</h2>
+            <p class="text-center text-responsive-extra">See all your items and start crafting</p>
+            
+            <!-- <div class="recipe-box">
+                
             <h1 class="title is-4">Craft your Item</h1>
-
+            
             
             <form action="/inventory.html" method="POST" id="recipeForm">
                 <input type="text" id="inputRecipe" name="recipe" value="" class="input is-normal" placeholder="The Item you want to craft; eg. Stick">
                 <input type="submit" value="Craft" class="button is-medium" style="width: 100%; background-color: #488021; border: none; color: #fff; margin-top: 5px;">
             </form>
         
-        </div>
+        </div> -->
+        
 
-
-        <!-- COLUMNS -->
-        <div class="columns">
-
-            <!-- COLUMN  -->
-            <div class="column inventory-box is-two-quarters">
-
-                <h1 class="title is-4" style="color: #fff;">Your Inventory</h1>
-                <p class="subtitle is-5" style="color: #488021;">See your items and set the number of items you have in your inventory</p>
-
+        <!-- <form action="/inventory.html" method="POST">
+            <div id="InventoryList" class="card-group">
+                <div class="card"></div>
+                    </div>
+                </form> -->
+                
                 <form action="/inventory.html" method="POST">
-                    <div id="InventoryList" class="card-group">
-                        <div class="card"></div>
+                    <div id="InventoryList" class="row row-cols-1 row-cols-md-4 g-4">
+                        
+                        <div  class="col">
+                            <div class="card text-center" style="background-color: #232627;">
+                                <div class="card-body">
+                                    <img src="./img/GrassBlock.png" alt="..." height="95" width="95" class="justify-content-center">
+                                    <h5 class="card-title">Grass Block | Count: </h5>
+                                    <p class="card-text">Change Count:</p>
+
+                                    <div class="d-inline">
+                                        <input type="text" name="" value="" />
+                                        <input style="background-color: #289A5C; color: #fff; border-radius: 12px; font-weight: bold; padding: 10px 60px; font-size: 15px; box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2); margin-top: 10px;" class="btn" type="submit" value="Set Count"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </form>
-
-            </div><!-- END OF COLUMN 2 -->
-        </div><!-- END OF COLUMNS -->
-    </div><!-- END OF MAIN CONTAINER -->
-
-            <!-- FOOTER -->
-            <footer class="page-footer">
-                <div class="content has-text-centered">
-                    <p>
-                        <strong>Copyright © Open Window Institute. All rights reserved.</strong>
-                      </p>
-                </div>
-              </footer> <!-- END OF FOOTER -->
-              <div class="border"></div>
-
-    <!-- JAVASCRIPT LINKS -->
-    <script>
-        function changeMinusSubmit(event)
-        {
+                    
+                
+            </div>
+        </div><!-- END OF MAIN CONTAINER -->
+            
+            
+            <!-- JAVASCRIPT LINKS -->
+            <script>
+                function changeMinusSubmit(event)
+                {
             document.getElementById("minusBlock").value = event.submitter.value;
         }
         document.getElementById("minusForm").addEventListener('submit', changeMinusSubmit);
