@@ -1,71 +1,71 @@
-<!-- REPLACE ALL THE [USERNAME] TEXT WITH YOUR GITHUB PROFILE NAME & THE [PROJECTNAME] WITH THE NAME OF YOUR GITHUB PROJECT -->
+<!-- REPLACE ALL THE [LaraCassandra] TEXT WITH YOUR GITHUB PROFILE NAME & THE [MineCount] WITH THE NAME OF YOUR GITHUB PROJECT -->
 
 <!-- Repository Information & Links-->
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/username/projectname?color=%000000)
-![GitHub watchers](https://img.shields.io/github/watchers/username/projectname?color=%000000)
-![GitHub language count](https://img.shields.io/github/languages/count/username/projectname?color=%000000)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/username/projectname?color=%000000)
+![GitHub repo size](https://img.shields.io/github/repo-size/LaraCassandra/MineCount?color=%23289A5C&style=flat-square)
+![GitHub watchers](https://img.shields.io/github/watchers/LaraCassandra/MineCount?color=%23289A5C&style=flat-square)
+![GitHub language count](https://img.shields.io/github/languages/count/LaraCassandra/MineCount?color=%23289A5C)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/LaraCassandra/Minecount?color=%23289A5C)
 [![LinkedIn][linkedin-shield]][linkedin-url]
-[![Instagram][instagram-shield]][instagram-url]
-[![Behance][behance-shield]][behance-url]
+<!-- [![Instagram][instagram-shield]][instagram-url]
+[![Behance][behance-shield]][behance-url] -->
 
 <!-- HEADER SECTION -->
-<h5 align="center" style="padding:0;margin:0;">Your Name & Surname</h5>
-<h5 align="center" style="padding:0;margin:0;">Student Number</h5>
-<h6 align="center">Subject Name & Year</h6>
+<h5 align="center" style="padding:0;margin:0;">Lara Cook</h5>
+<h5 align="center" style="padding:0;margin:0;">190218</h5>
+<h6 align="center">IDV302</h6>
 </br>
 <p align="center">
 
-  <a href="https://github.com/username/projectname">
-    <img src="path/to/logo" alt="Logo" width="140" height="140">
+  <a href="https://github.com/LaraCassandra/MineCount">
+    <img src="Images/logo.png" alt="Logo" width="140" height="140">
   </a>
   
-  <h3 align="center">Project Name</h3>
+  <h3 align="center">MineCount</h3>
 
   <p align="center">
-    Short Project Slogan / Description <br>
-      <a href="https://github.com/username/projectname"><strong>Explore the docs »</strong></a>
+    Minecraft Inventory Tracker<br>
+      <a href="https://github.com/LaraCassandra/MineCount"><strong>Explore the docs »</strong></a>
    <br />
    <br />
    <a href="path/to/demonstration/video">View Demo</a>
     ·
-    <a href="https://github.com/username/projectname/issues">Report Bug</a>
+    <a href="https://github.com/LaraCassandra/MineCount/issues">Report Bug</a>
     ·
-    <a href="https://github.com/username/projectname/issues">Request Feature</a>
+    <a href="https://github.com/LaraCassandra/MineCount/issues">Request Feature</a>
 </p>
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Project Description](#project-description)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [How to install](#how-to-install)
-* [Features and Functionality](#features-and-functionality)
-* [Concept Process](#concept-process)
-   * [Ideation](#ideation)
-   * [Wireframes](#wireframes)
-   * [User-flow](#user-flow)
-* [Development Process](#development-process)
-   * [Implementation Process](#implementation-process)
-        * [Highlights](#highlights)
-        * [Challenges](#challenges)
-   * [Reviews and Testing](#peer-reviews)
-        * [Feedback from Reviews](#feedback-from-reviews)
-        * [Unit Tests](#unit-tests)
-   * [Future Implementation](#peer-reviews)
-* [Final Outcome](#final-outcome)
-    * [Mockups](#mockups)
-    * [Video Demonstration](#video-demonstration)
-* [Conclusion](#conclusion)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+- [Table of Contents](#table-of-contents)
+- [About the Project](#about-the-project)
+  - [Project Description](#project-description)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [How to install](#how-to-install)
+  - [Installation](#installation)
+- [Features and Functionality](#features-and-functionality)
+  - [See and Update Item Count in Inventory](#see-and-update-item-count-in-inventory)
+  - [Craft from Recipes](#craft-from-recipes)
+- [Concept Process](#concept-process)
+  - [Ideation](#ideation)
+  - [Wireframes](#wireframes)
+- [Development Process](#development-process)
+  - [Implementation Process](#implementation-process)
+    - [Highlights](#highlights)
+    - [Challenges](#challenges)
+  - [Future Implementation](#future-implementation)
+- [Final Outcome](#final-outcome)
+  - [Mockups](#mockups)
+  - [Video Demonstration](#video-demonstration)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Authors](#authors)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
 <!--PROJECT DESCRIPTION-->
 ## About the Project
@@ -74,13 +74,21 @@
 
 ### Project Description
 
-A nice introduction to this amazing project of mine.
+MineCount is an interactive web 
+application that acts as a Minecraft Inventory tracker. 
+The user is able to track their Minecraft blocks and 
+store the count in a database and craft recipes from 
+those blocks.
 
 ### Built With
 
-* [Technology Name](path/to/technology/website)
-* [Technology Name](path/to/technology/website)
-* [Technology Name](path/to/technology/website)
+* [C#]([path/to/technology/website](https://docs.microsoft.com/en-us/dotnet/csharp/))
+* [MySQL](https://www.mysql.com/)
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Bootstrap](https://getbootstrap.com/)
+* [GitHub](https://github.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
@@ -90,34 +98,25 @@ The following instructions will get you a copy of the project up and running on 
 
 ### Prerequisites
 
-Ensure that you have the latest version of [Software](path/to/where/they/can/download/software) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
+Ensure that you have the latest version of [Visual Studio Code](https://code.visualstudio.com/) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
 
 ### How to install
 
 ### Installation
 Here are a couple of ways to clone this repo:
 
-1. Software </br>
-`Android Studio` -> `File` -> `New` -> `From Version Control` -> `Git`</br>
-Enter `https://github.com/username/projectname.git` into the URL field and press the `Clone` button.
+1. Software Command-line </br>
+`Visual Studio Code` -> `Terminal` -> `New Terminal` -> `Run the following`</br>
+   ```sh
+   git clone https://github.com/LaraCassandra/MineCount.git
+   ```
 
-2. Clone Repository </br>
+1. Clone Repository </br>
 Run the following in the command-line to clone the project:
    ```sh
-   git clone https://github.com/username/projectname.git
+   git clone https://github.com/LaraCassandra/MineCount.git
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
-
-3. Install Dependencies </br>
-Run the following in the command-line to install all the required dependencies:
-   ```sh
-   npm install
-   ```
-
-4. Get a free API Key at [https://example.com](https://example.com) and enter it in the `config.js` file:
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
 
 
 <!-- FEATURES AND FUNCTIONALITY-->
@@ -125,22 +124,14 @@ Run the following in the command-line to install all the required dependencies:
 ## Features and Functionality
 
 ![image2][image2]
-### Feature 1
+### See and Update Item Count in Inventory
 
-Description of Feature
+See live count of inventory items and update item count
 
 ![image3][image3]
-### Feature 2
+### Craft from Recipes
 
-Description of Feature
-
-![image4][image4]
-### Feature 3
-
-Description of Feature
-
-![image5][image5]
-
+Craft items from recipes and live update inventory items
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
@@ -150,17 +141,13 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Ideation
 
-![image5][image5]
+![image5][image4]
 <br>
-![image6][image6]
 
 ### Wireframes
 
-![image7][image7]
+![image6][image5]
 
-### User-flow
-
-![image8][image8]
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
@@ -170,52 +157,39 @@ The `Development Process` is the technical implementations and functionality don
 ### Implementation Process
 <!-- stipulate all of the functionality you included in the project -->
 
-* Made use of both `functionality` to implement a specific feature.
-* `MVC/MVVM` design architecture implemented.
-* `Plugin` for this.
-* ETC.
+* Made use of both `HTML` and `Bootstrap` to create and design the frontend.
+* Used C# to implement an `HTTP web server` to dynamically and statically display web pages.
+* Made use of `Classes and Objects` to hold infomation of the blocks, recipes and functions to perform the necessary actions.
+* `MVC` architecture was used as the structure for the development structure.
+* The database was implemented with `MySQL`
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* Sunshine.
-* Rainbows.
+* A fun and `exciting theme` since I enjoy playing Minecraft
+* Being able to `parse information` through to the frontend from the database in an effective and appealing way.
+* Improving the `UI` to look more appealing and usable.
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* Bugs.
-* Bugs.
-
-### Reviews & Testing
-<!-- stipulate how you've conducted testing in the form of peer reviews, feedback and also functionality testing, like unit tests (if applicable) -->
-
-#### Feedback from Reviews
-
-`Peer Reviews` were conducted by my fellow students and lecturer. The following feedback I found useful:
-
-* Feedback one.
-* Feedback two.
-
-#### Unit Tests
-
-`Unit Tests` were conducted to establish working functionality. Here are all the tests that were ran:
-
-* Test 1 of this functionality
-* Test 2 of this functionality
+* Attempting to have the ability to craft items from their card tile.
+* The recipes functionality in general.
+* Continued confusion towards the concepts of `OOP`.
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-* Future 1.
-* Future 2.
+* Be able to `craft` a recipe straight from the item card (if applicable).
+* `Connect the tracker` straight to Minecraft to directly track inventory.
+* Add `categories` to find items better.
 
 <!-- MOCKUPS -->
 ## Final Outcome
 
 ### Mockups
 
-![image9][image9]
+![image8][image6]
 <br>
-![image10][image10]
+![image9][image7]
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
@@ -227,7 +201,7 @@ To see a run through of the application, click below:
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/username/projectname/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/LaraCassandra/MineCount/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -243,7 +217,7 @@ Contributions are what makes the open-source community such an amazing place to 
 <!-- AUTHORS -->
 ## Authors
 
-* **Your Name & Surname** - [username](https://github.com/username)
+* **Your Name & Surname** - [LaraCassandra](https://github.com/LaraCassandra)
 
 <!-- LICENSE -->
 ## License
@@ -253,35 +227,32 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- LICENSE -->
 ## Contact
 
-* **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/) 
-* **Project Link** - https://github.com/username/projectname
+* **Your Name & Surname** - [email@address](mailto:larac.cook@gmail.com)
+* **Project Link** - https://github.com/LaraCassandra/MineCount
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 <!-- all resources that you used and Acknowledgements here -->
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
-
+* Lecturer: Christof Enslin
+* [C# documentation](https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [Bootstrap](https:/www.getbootstrap.com/)
+* [Minecraft Imagery](https://minecraft.fandom.com/wiki/Minecraft_Wiki)
+* [Freepik](https:/www.freepik.com/home)
+* [FlatIcon](https:/www.flaticon.com/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[image1]: /path/to/image.png
-[image2]: /path/to/image.png
-[image3]: /path/to/image.png
-[image4]: /path/to/image.png
-[image5]: /path/to/image.png
-[image6]: /path/to/image.png
-[image7]: /path/to/image.png
-[image8]: /path/to/image.png
-[image9]: /path/to/image.png
-[image10]: /path/to/image.png
+[image1]: Images/image-1.png
+[image2]: Images/image-2.png
+[image3]: Images/image-3.png
+[image4]: Images/image-4.png
+[image5]: Images/image-5.png
+[image6]: Images/image-6.png
+[image7]: Images/image-7.png
 
 
 <!-- Refer to https://shields.io/ for more information and options about the shield links at the top of the ReadMe file -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/nameonlinkedin/
+[linkedin-url]: https://www.linkedin.com/in/laracassandra/
 [instagram-shield]: https://img.shields.io/badge/-Instagram-black.svg?style=flat-square&logo=instagram&colorB=555
 [instagram-url]: https://www.instagram.com/instagram_handle/
 [behance-shield]: https://img.shields.io/badge/-Behance-black.svg?style=flat-square&logo=behance&colorB=555
